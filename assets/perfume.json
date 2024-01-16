@@ -1,0 +1,2087 @@
+{
+    "products":[
+        {
+            "name": "Nina Ricci Nina Eau de Toilette, Perfume for Women, 2.7 oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Nina-Ricci-Nina-Eau-de-Toilette-Perfume-for-Women-2-7-oz/28581424?athcpid=28581424&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMzYuNTYsNzI4OC40NiwwLjAwNjU5MzgyMjE2NjY4OTAzNSwwLjVf&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.8,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/5dca0bd2-d649-47b9-a7d8-854e92f0a76a.81839018ba1fe5118a79594af8f64f3e.jpeg",
+                "id": "FF98DCEC78414323A18FE55B6DC707B9",
+                "name": "5dca0bd2-d649-47b9-a7d8-854e92f0a76a.81839018ba1fe5118a79594af8f64f3e.jpeg"
+            },
+            "numberOfReviews": 17,
+            "offerId": "B58EE00FA1864696980BD49AF562815A",
+            "orderMinLimit": 1,
+            "orderLimit": 26,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 47.8,
+                    "priceString": "$47.80",
+                    "variantPriceString": "$47.80",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$47.80"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "290BB21886C04E1AA6B60895E020751A",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "28581424",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Marc Jacobs Daisy Dream Eau De Toilette, Perfume for Women, 3.4 Oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1004",
+                        "text": "2-day shipping",
+                        "key": "TWO_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Marc-Jacobs-Daisy-Dream-Eau-De-Toilette-Perfume-for-Women-3-4-Oz/43408266?athcpid=43408266&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeOTkuMjksNTc2Mi41MywwLjAxOTMyODQwNjU4MTk4MjI4OCwwLjVf&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.6,
+            "socialInfo": null,
+            "fulfillmentBadge": "2 days",
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/540ac233-eadb-41d8-9e50-19f357d3c675.3e5219979e1e56cad6a47b80063cd5a4.jpeg",
+                "id": "C203D7F3EB8E42C690C16E1CE27919FE",
+                "name": "540ac233-eadb-41d8-9e50-19f357d3c675.3e5219979e1e56cad6a47b80063cd5a4.jpeg"
+            },
+            "numberOfReviews": 499,
+            "offerId": "31097F1270C04E869F9F1ECA8B820AFB",
+            "orderMinLimit": 1,
+            "orderLimit": 3,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 67.99,
+                    "priceString": "$67.99",
+                    "variantPriceString": "$67.99",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "Now $67.99"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": {
+                    "price": 137,
+                    "priceString": "$137.00",
+                    "variantPriceString": null,
+                    "currencyUnit": null,
+                    "bestValue": null
+                },
+                "comparisonPrice": null,
+                "savingsAmount": {
+                    "priceString": "SAVE $69.01"
+                },
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "DE142A5A62654162B1C614FF45DFF7CC",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "43408266",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Dolce & Gabbana Intense Eau de Parfum Spray, 3.3 Oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Dolce-Gabbana-Intense-Eau-de-Parfum-Spray-3-3-Oz/37653967?athcpid=37653967&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0&athstid=CS099&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.5,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/d1489bcd-0fbd-4ea6-8574-72780e606f84.9f0bd6fb7c10ce1e2a4d878dea189084.jpeg",
+                "id": "D5ED0CDD93CA4306ABED664F233618D4",
+                "name": "d1489bcd-0fbd-4ea6-8574-72780e606f84.9f0bd6fb7c10ce1e2a4d878dea189084.jpeg"
+            },
+            "numberOfReviews": 15,
+            "offerId": "4B20658C3B9542DAA53FFC326FC60906",
+            "orderMinLimit": 1,
+            "orderLimit": 1,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 60.69,
+                    "priceString": "$60.69",
+                    "variantPriceString": "$60.69",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$60.69"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "307017647E894EDBA6E2FD1605480650",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": {
+                "spQs": "ERTibo40RH-tTQ5lxVwsvcq_3Yy9RXS4e4tP9n2HWgBTfCoO5sGuQYDPKqg0PvjkKwn3zQNZTU0PnTXf6a280EdxZLXwJ7knFNlHwXMKGNpSYxglCu7IR_HupY4GMDAVib8cVrXn-GqhvnmIC_UCM4EDaQNzPeQa0j_oJKw3w1-VT2Ty5Ohunu6C0gIWaEiZ",
+                "clickBeacon": "https://wrd.walmart.com/track?eventST=__eventST__&plmt=__plmt__&rdf=0&tax=__tax__&pltfm=desktop&pt=item&mloc=sp-item-p13n&storeId=3081&adUid=6f405dbe-3700-46e2-9c3e-6aeb81fae9d4&bt=__bt__&pgId=34041822&pos=__pos__&spQs=ERTibo40RH-tTQ5lxVwsvcq_3Yy9RXS4e4tP9n2HWgBTfCoO5sGuQYDPKqg0PvjkKwn3zQNZTU0PnTXf6a280EdxZLXwJ7knFNlHwXMKGNpSYxglCu7IR_HupY4GMDAVib8cVrXn-GqhvnmIC_UCM4EDaQNzPeQa0j_oJKw3w1-VT2Ty5Ohunu6C0gIWaEiZ",
+                "viewBeacon": null,
+                "spTags": null
+            },
+            "usItemId": "37653967",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "JIMMY CHOO ILLICIT FLOWER By JIMMY CHOO For WOMEN",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1003",
+                        "text": "1-day shipping",
+                        "key": "ONE_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/JIMMY-CHOO-ILLICIT-FLOWER-By-JIMMY-CHOO-For-WOMEN/168109679?athcpid=168109679&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMjQ0LjcsODg4NS4wMTk5OTk5OTk5OTksMC4wMjgwMTY3MTg1ODc5MjQyMTYsMC41Xw&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "VARIANT",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.7,
+            "socialInfo": null,
+            "fulfillmentBadge": "Tomorrow",
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_oneday_delivery",
+            "fulfillmentType": "FC",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/seo/JIMMY-CHOO-ILLICIT-FLOWER-By-JIMMY-CHOO-For-WOMEN_e0ab2e1a-c770-417a-80ba-0a04bdfd22cc.1557905d58037c56dacff8ab03746a9d.jpeg",
+                "id": "8DA1D34DE30748F1BE0695EE47E48543",
+                "name": "JIMMY-CHOO-ILLICIT-FLOWER-By-JIMMY-CHOO-For-WOMEN_e0ab2e1a-c770-417a-80ba-0a04bdfd22cc.1557905d58037c56dacff8ab03746a9d.jpeg"
+            },
+            "numberOfReviews": 81,
+            "offerId": "800339A13EA24900A4D59F42D278761D",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 38.99,
+                    "priceString": "$38.99",
+                    "variantPriceString": "$38.99",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "Now $38.99"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": true,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": {
+                    "minPrice": 38.99,
+                    "maxPrice": 38.99,
+                    "priceString": null
+                },
+                "unitPrice": null,
+                "wasPrice": {
+                    "price": 67.63,
+                    "priceString": "$67.63",
+                    "variantPriceString": null,
+                    "currencyUnit": null,
+                    "bestValue": null
+                },
+                "comparisonPrice": null,
+                "savingsAmount": {
+                    "priceString": "SAVE $28.64"
+                },
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "F55CDC31AB754BB68FE0B39041159D63",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": "ONE_DAY",
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "168109679",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Armani Code By Giorgio Armani For Men. Eau De Toilette Spray 4.2 Oz.",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Armani-Code-By-Giorgio-Armani-For-Men-Eau-De-Toilette-Spray-4-2-Oz/188663313?athcpid=188663313&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMTYuODMsMjk3Mi41OSwwLjAwNTc0MzE5OTg1MTY4MzY4OSwwLjVf&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.5,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/86598e4a-822d-4bf3-a069-2e190dc2f3f0.34c8b880954796ae299260c0c226928e.jpeg",
+                "id": "EA8253E6E6EE4D2A8CCEDF264812E41B",
+                "name": "86598e4a-822d-4bf3-a069-2e190dc2f3f0.34c8b880954796ae299260c0c226928e.jpeg"
+            },
+            "numberOfReviews": 2,
+            "offerId": "815D8BD7080B3A2B8A637CE352B1F606",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 74.99,
+                    "priceString": "$74.99",
+                    "variantPriceString": "$74.99",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "Now $74.99"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": {
+                    "price": 86.97,
+                    "priceString": "$86.97",
+                    "variantPriceString": null,
+                    "currencyUnit": null,
+                    "bestValue": null
+                },
+                "comparisonPrice": null,
+                "savingsAmount": {
+                    "priceString": "SAVE $11.98"
+                },
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "EACH",
+            "sellerId": "A17759E9E0EF4F7B9B54EC17FA9EB8AA",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "188663313",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Salvatore Ferragamo Incanto Shine Eau De Toilette Spray, Perfume for Women, 1.7 Oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Salvatore-Ferragamo-Incanto-Shine-Eau-De-Toilette-Spray-Perfume-for-Women-1-7-Oz/25869590?athcpid=25869590&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMjQuOTYsMTgwMy42Mzk5OTk5OTk5OTk5LDAuMDE2MDk2MDE4ODI5MTgyMTc4LDAuNV8&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.6,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_date_delivery",
+            "fulfillmentType": "FC",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/84d75fe6-95cb-45a2-850f-d43f7cec78f5.fec0d922e49e4d8b78b73b1b88b5364a.jpeg",
+                "id": "E4FBEAF4D173411EB9316DC8CD112538",
+                "name": "84d75fe6-95cb-45a2-850f-d43f7cec78f5.fec0d922e49e4d8b78b73b1b88b5364a.jpeg"
+            },
+            "numberOfReviews": 5,
+            "offerId": "C09A6B7CBF9341A3A4CC18AACAE8C7EA",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 18.97,
+                    "priceString": "$18.97",
+                    "variantPriceString": "$18.97",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$18.97"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": true,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "F55CDC31AB754BB68FE0B39041159D63",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": "THREE_TO_FIVE_DAY",
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "25869590",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Gucci Rush Eau De Toilette Spray, Perfume for Women, 1.7 Oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Gucci-Rush-Eau-De-Toilette-Spray-Perfume-for-Women-1-7-Oz/26124611?athcpid=26124611&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMzQuMjEsMjIyMi4zLDAuMDEyNTE1NjU3NDc2NzYxNTQ2LDAuNV8&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.4,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/df738d34-672d-4b72-a63c-44848b26d5df_1.b36e92b3a165476b70b1633218a051b5.jpeg",
+                "id": "0B8F1C3091F64D80888D5D1B4AFF0884",
+                "name": "df738d34-672d-4b72-a63c-44848b26d5df_1.b36e92b3a165476b70b1633218a051b5.jpeg"
+            },
+            "numberOfReviews": 16,
+            "offerId": "3DD282535031452EB96B62CCE77A9091",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 85.42,
+                    "priceString": "$85.42",
+                    "variantPriceString": "$85.42",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$85.42"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "A4CBEC21168E4D2FADDF00850C2A63BA",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "26124611",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Versace Bright Crystal Eau de Toilette, Perfume for Women, 0.17 Oz, Mini & Travel Size",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Versace-Bright-Crystal-Eau-de-Toilette-Perfume-for-Women-0-17-Oz-Mini-Travel-Size/183384705?athcpid=183384705&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMjEyLjk4LDUwNTguODYwMDAwMDAwMDAxLDAuMDQwODI4NTk4NDI3Nzc0MzMsMC41Xw&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/da695eba-4dcf-4442-bc02-64d3d369295b.854953ca899f8db9958af1b9ccf2eda9.jpeg",
+                "id": "8953F0AD36194F22B4C4416281C7E0AA",
+                "name": "da695eba-4dcf-4442-bc02-64d3d369295b.854953ca899f8db9958af1b9ccf2eda9.jpeg"
+            },
+            "numberOfReviews": 46,
+            "offerId": "A4B87CF8FD8C4DE29517A3C51E084BB9",
+            "orderMinLimit": 1,
+            "orderLimit": 10,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 9.94,
+                    "priceString": "$9.94",
+                    "variantPriceString": "$9.94",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$9.94"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "EACH",
+            "sellerId": "DDFEA90BA6454AF68AE54FC89FA3BB58",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "183384705",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Versace Bright Crystal Absolu Eau De Perfume for Women, 3 oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1004",
+                        "text": "2-day shipping",
+                        "key": "TWO_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Versace-Bright-Crystal-Absolu-Eau-De-Perfume-for-Women-3-oz/47002984?athcpid=47002984&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMjc2LjkyLDY2OTcuNjIsMC4wNDY0NTY2NDE3MzQ0MTA0NCwwLjVf&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.6,
+            "socialInfo": null,
+            "fulfillmentBadge": "2 days",
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_date_delivery",
+            "fulfillmentType": "FC",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/80a85f2e-3670-455d-ab02-1311334ad9c3.b8cf8fdcbcbf66a8125286139dfcb612.jpeg",
+                "id": "BF8401F36EC3476F9627ADD5A2753D7D",
+                "name": "80a85f2e-3670-455d-ab02-1311334ad9c3.b8cf8fdcbcbf66a8125286139dfcb612.jpeg"
+            },
+            "numberOfReviews": 211,
+            "offerId": "AEB5338164F4412C9BF34F7BF77EC4BB",
+            "orderMinLimit": 1,
+            "orderLimit": 8,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 58.78,
+                    "priceString": "$58.78",
+                    "variantPriceString": "$58.78",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "Now $58.78"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": {
+                    "price": 120,
+                    "priceString": "$120.00",
+                    "variantPriceString": null,
+                    "currencyUnit": null,
+                    "bestValue": null
+                },
+                "comparisonPrice": null,
+                "savingsAmount": {
+                    "priceString": "SAVE $61.22"
+                },
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "24788263FAF64841BADECE274707FB8F",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": "TWO_DAY",
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "47002984",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Design by Paul Sebastian Fine Parfum Spray For Women 3.40 oz (Pack of 2)",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Design-by-Paul-Sebastian-Fine-Parfum-Spray-For-Women-3-40-oz-Pack-of-2/584368231?athcpid=584368231&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMS4xOCw0MDUuNzEsMC4wMDQ5OTU4MTgxOTEwMTk3MTUsMC41Xw&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/d39d2dcc-4ee3-4473-81b2-f5832740ddde_1.2cb9230a65c6c242445acd18838c7660.jpeg",
+                "id": "EEFB9581DFAF4EF781DA6715D189F082",
+                "name": "d39d2dcc-4ee3-4473-81b2-f5832740ddde_1.2cb9230a65c6c242445acd18838c7660.jpeg"
+            },
+            "numberOfReviews": 4,
+            "offerId": "87AB51D1856A4C1B97FAF87D28A8406A",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 39.34,
+                    "priceString": "$39.34",
+                    "variantPriceString": "$39.34",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$39.34"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": {
+                    "price": 9.95,
+                    "priceString": "+$9.95 shipping",
+                    "variantPriceString": null,
+                    "currencyUnit": null,
+                    "bestValue": null
+                },
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "EACH",
+            "sellerId": "633F3A5064F6473880082283064499E1",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "584368231",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Coach Floral Eau de Parfum, Perfume for Women, 1.7 oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Coach-Floral-Eau-de-Parfum-Perfume-for-Women-1-7-oz/608213508?athcpid=608213508&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeNDczLjg3LDE0MjU2LjA4LDAuMDM0NTE2MjU2ODU2NTAwMDgsMC41Xw&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.5,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/0ae5d836-a6be-40d3-9a1d-6edad5cc51f1.4095ea6c3e9af5e364e5961a82f560b2.jpeg",
+                "id": "F14651EE7F6145869774EF16F42AE86C",
+                "name": "0ae5d836-a6be-40d3-9a1d-6edad5cc51f1.4095ea6c3e9af5e364e5961a82f560b2.jpeg"
+            },
+            "numberOfReviews": 1638,
+            "offerId": "DAE750E1A2D642038AFFAB586143E809",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 36.99,
+                    "priceString": "$36.99",
+                    "variantPriceString": "$36.99",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "Now $36.99"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": {
+                    "price": 80,
+                    "priceString": "$80.00",
+                    "variantPriceString": null,
+                    "currencyUnit": null,
+                    "bestValue": null
+                },
+                "comparisonPrice": null,
+                "savingsAmount": {
+                    "priceString": "SAVE $43.01"
+                },
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Seasonal/Built for Better/For You/For you Health & Beauty",
+                "categoryPathId": "0:1085632:8747893:2975362:6430735"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "571CE743727341C1928D53CB32A26FFF",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "608213508",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Versace Yellow Diamond Eau De Toilette, Perfume For Women, .17 oz",
+            "badges": {
+                "flags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1400",
+                        "text": "Clearance",
+                        "key": "CLEARANCE",
+                        "query": null,
+                        "type": "LABEL",
+                        "styleId": null
+                    }
+                ],
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Versace-Yellow-Diamond-Eau-De-Toilette-Perfume-For-Women-17-oz/48465819?athcpid=48465819&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMjAuMCw5ODAuMCwwLjAxOTE2MDM2NDIyMDAzMDYzMiwwLjVf&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true&athbdg=L1400",
+            "classType": "BVSHELL",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": false,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.4,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/seo/Versace-Yellow-Diamond-Eau-De-Toilette-Perfume-For-Women-17-oz_efc2d8b2-4dae-4603-a57c-eff140678321_1.9577407ab5a9821c2c9b40e0d72f2f61.jpeg",
+                "id": "D619DF3E5AD64890A0A2B5E3C1FBEB63",
+                "name": "Versace-Yellow-Diamond-Eau-De-Toilette-Perfume-For-Women-17-oz_efc2d8b2-4dae-4603-a57c-eff140678321_1.9577407ab5a9821c2c9b40e0d72f2f61.jpeg"
+            },
+            "numberOfReviews": 516,
+            "offerId": "D9A2887790604750B8AED09314AB80FE",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 9.86,
+                    "priceString": "$9.86",
+                    "variantPriceString": "$9.86",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "Now $9.86"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": true,
+                    "eligibleForAssociateDiscount": true,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": true,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": {
+                    "minPrice": 9.86,
+                    "maxPrice": 89.99,
+                    "priceString": "Options from $9.86 – $89.99"
+                },
+                "unitPrice": null,
+                "wasPrice": {
+                    "price": 11.11,
+                    "priceString": "$11.11",
+                    "variantPriceString": null,
+                    "currencyUnit": null,
+                    "bestValue": null
+                },
+                "comparisonPrice": null,
+                "savingsAmount": {
+                    "priceString": "SAVE $1.25"
+                },
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "EACH",
+            "sellerId": "307017647E894EDBA6E2FD1605480650",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": true,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "48465819",
+            "variantCount": 3,
+            "variantCriteria": null
+        },
+        {
+            "name": "Bright Crystal by Versace,Eau De Toilette Spray 3 oz, For Women",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Bright-Crystal-by-Versace-Eau-De-Toilette-Spray-3-oz-For-Women/199930841?athcpid=199930841&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeNTEuMTQsNzI4LjkzMDAwMDAwMDAwMDEsMC4wNzIwODY5MTMyMDIyMDc4OSwwLjVf&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 5,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/be1e793a-b50c-419b-b225-9bac176b1f61.ab8ad2cd1ea15cebb098994d99eba83e.jpeg",
+                "id": "A55CA6D781844269AE5C3AA0A64B5E19",
+                "name": "be1e793a-b50c-419b-b225-9bac176b1f61.ab8ad2cd1ea15cebb098994d99eba83e.jpeg"
+            },
+            "numberOfReviews": 1,
+            "offerId": "D6BF09FB103043D984A4993878C3462D",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 66.9,
+                    "priceString": "$66.90",
+                    "variantPriceString": "$66.90",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$66.90"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "EACH",
+            "sellerId": "0D59141572904A1DAA92FFCFAAE55F99",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "199930841",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Fragluxe CUBA RED Eau De Toilette Spray for Men 1.15 oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Fragluxe-CUBA-RED-Eau-De-Toilette-Spray-for-Men-1-15-oz/28664380?athcpid=28664380&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMjAuMCw5ODAuMCwwLjAxODk2MTQyMzc3MzUxMDM2NSwwLjVf&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "BVSHELL",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": false,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.6,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/seo/Fragluxe-CUBA-RED-Eau-De-Toilette-Spray-for-Men-1-15-oz_e0115cce-d03a-43b3-8b98-6ce9654bb16c_1.ddf6a935321923b07d2d25b92472f3f7.jpeg",
+                "id": "A9324F37C44F451DA2505928DE8ED04E",
+                "name": "Fragluxe-CUBA-RED-Eau-De-Toilette-Spray-for-Men-1-15-oz_e0115cce-d03a-43b3-8b98-6ce9654bb16c_1.ddf6a935321923b07d2d25b92472f3f7.jpeg"
+            },
+            "numberOfReviews": 394,
+            "offerId": "16BC4783C96F4CF2B080D5041DAC111D",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 8.49,
+                    "priceString": "$8.49",
+                    "variantPriceString": "$8.49",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$8.49"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": true,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": {
+                    "minPrice": 5.98,
+                    "maxPrice": 32.64,
+                    "priceString": "More options from $5.98"
+                },
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Cologne for Men",
+                "categoryPathId": "0:7924299:9678309:6815516"
+            },
+            "type": null,
+            "salesUnit": "EACH",
+            "sellerId": "C1C0CCEF4BE846FC8671F2B6010D2A2E",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": true,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "28664380",
+            "variantCount": 14,
+            "variantCriteria": null
+        },
+        {
+            "name": "Dolce & Gabbana Light Blue Eau de Toilette, Perfume for Women, 0.85 oz",
+            "badges": {
+                "flags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1700",
+                        "text": "Reduced price",
+                        "key": "REDUCED_PRICE",
+                        "query": null,
+                        "type": "LABEL",
+                        "styleId": null
+                    }
+                ],
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1004",
+                        "text": "2-day shipping",
+                        "key": "TWO_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Dolce-Gabbana-Light-Blue-Eau-de-Toilette-Perfume-for-Women-0-85-oz/34793902?athcpid=34793902&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMjAuMCw5ODAuMCwwLjAyMDAyNzYwODE2MDcyMTI5MywwLjVf&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true&athbdg=L1700",
+            "classType": "BVSHELL",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": false,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.5,
+            "socialInfo": null,
+            "fulfillmentBadge": "2 days",
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_date_delivery",
+            "fulfillmentType": "FC",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/seo/Dolce-Gabbana-Light-Blue-Eau-de-Toilette-Perfume-for-Women-0-85-oz_bdc74315-c7a7-4784-9974-36e24bc4d652.1788b67f23dad3963f5cc2d80924cc9e.jpeg",
+                "id": "5F5F71AA3E244C86855E4FF4C36CF198",
+                "name": "Dolce-Gabbana-Light-Blue-Eau-de-Toilette-Perfume-for-Women-0-85-oz_bdc74315-c7a7-4784-9974-36e24bc4d652.1788b67f23dad3963f5cc2d80924cc9e.jpeg"
+            },
+            "numberOfReviews": 1075,
+            "offerId": "241C1E07B60B4759A3E49A33C927AFE6",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 30.88,
+                    "priceString": "$30.88",
+                    "variantPriceString": "$30.88",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "Now $30.88"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": true,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": {
+                    "minPrice": 30.88,
+                    "maxPrice": 73.49,
+                    "priceString": "Options from $30.88 – $73.49"
+                },
+                "unitPrice": null,
+                "wasPrice": {
+                    "price": 34.99,
+                    "priceString": "$34.99",
+                    "variantPriceString": null,
+                    "currencyUnit": null,
+                    "bestValue": null
+                },
+                "comparisonPrice": null,
+                "savingsAmount": {
+                    "priceString": "SAVE $4.11"
+                },
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "EACH",
+            "sellerId": "9E24D983509E43D196B8E4E13C291AF0",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": "TWO_DAY",
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": true,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "34793902",
+            "variantCount": 4,
+            "variantCriteria": null
+        },
+        {
+            "name": "Versace Bright Crystal Absolute Eau De Parfum Spray for Women 1.70 oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1005",
+                        "text": "3+ day shipping",
+                        "key": "THREE_PLUS_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Versace-Bright-Crystal-Absolute-Eau-De-Parfum-Spray-for-Women-1-70-oz/48600460?athcpid=48600460&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeODkuNTQsMjc3Ni4wNCwwLjAzMjc3ODk5NTIxNjMwNjIsMC41Xw&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "BVSHELL",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": false,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.8,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/seo/Versace-Bright-Crystal-Absolute-Eau-De-Parfum-Spray-for-Women-1-70-oz_ce8c7ed2-9a97-4896-8be0-6d174d5c2e9d_1.9e0b9bfd207d2b74db22ed8b531ad853.jpeg",
+                "id": "E4C75EB399844FA58805A8F401C173E2",
+                "name": "Versace-Bright-Crystal-Absolute-Eau-De-Parfum-Spray-for-Women-1-70-oz_ce8c7ed2-9a97-4896-8be0-6d174d5c2e9d_1.9e0b9bfd207d2b74db22ed8b531ad853.jpeg"
+            },
+            "numberOfReviews": 11,
+            "offerId": "6BEDCBC10C333425BDE58014133D10FA",
+            "orderMinLimit": 1,
+            "orderLimit": 10,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 47.5,
+                    "priceString": "$47.50",
+                    "variantPriceString": "$47.50",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$47.50"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": {
+                    "minPrice": 47.5,
+                    "maxPrice": 47.5,
+                    "priceString": null
+                },
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "EACH",
+            "sellerId": "A7D7962DB1D34775B6609A97656D3911",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": true,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "48600460",
+            "variantCount": 2,
+            "variantCriteria": null
+        },
+        {
+            "name": "Versace Woman Eau de Parfum, Perfume for Women, 3.4 oz",
+            "badges": {
+                "flags": null,
+                "labels": [],
+                "tags": [
+                    {
+                        "__typename": "BaseBadge",
+                        "id": "L1004",
+                        "text": "2-day shipping",
+                        "key": "TWO_DAY_SHIPPING"
+                    }
+                ],
+                "groups": []
+            },
+            "canonicalUrl": "/ip/Versace-Woman-Eau-de-Parfum-Perfume-for-Women-3-4-oz/29844350?athcpid=29844350&athpgid=AthenaItempage&athcgid=null&athznid=si&athieid=v0_eeMzMuMzEsMjcxOC4xMSwwLjAxMDYyMzYwNDg1MzE0NjU0LDAuNV8&athstid=CS004&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.7,
+            "socialInfo": null,
+            "fulfillmentBadge": "2 days",
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_date_delivery",
+            "fulfillmentType": "FC",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/bc8b658f-d345-4c90-9ef1-f48d589e18ab.d43c63f9811d6bf31f9a728d03dc33a0.jpeg",
+                "id": "5F391E8B92DD4E2C87222F983FB6B1DD",
+                "name": "bc8b658f-d345-4c90-9ef1-f48d589e18ab.d43c63f9811d6bf31f9a728d03dc33a0.jpeg"
+            },
+            "numberOfReviews": 54,
+            "offerId": "EFE63F8B38C14480A0BC92DBF8BC5681",
+            "orderMinLimit": 1,
+            "orderLimit": 12,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 35.21,
+                    "priceString": "$35.21",
+                    "variantPriceString": "$35.21",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "$35.21"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": null,
+                "comparisonPrice": null,
+                "savingsAmount": null,
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "24788263FAF64841BADECE274707FB8F",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": "TWO_DAY",
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "29844350",
+            "variantCount": null,
+            "variantCriteria": null
+        },
+        {
+            "name": "Versace Bright Crystal by Versace, 3 oz EDT Spray for Women",
+            "badges": null,
+            "canonicalUrl": "/ip/Versace-Bright-Crystal-by-Versace-3-oz-EDT-Spray-for-Women/34041822?athcpid=34041822&athpgid=AthenaItempage&athcgid=null&athznid=sb&athieid=v0&athstid=CS020&athguid=GieDL6Veyje_TwHF_IbceoQYJcYD-Jrb2tTc&athancid=34041822&athena=true",
+            "classType": "REGULAR",
+            "availabilityStatus": "IN_STOCK",
+            "showAtc": true,
+            "personalizable": false,
+            "externalInfo": null,
+            "averageRating": 4.4,
+            "socialInfo": null,
+            "fulfillmentBadge": null,
+            "fulfillmentSpeed": null,
+            "fulfillmentTitle": "title_shipToHome_not_available",
+            "fulfillmentType": "MARKETPLACE",
+            "annualEvent": null,
+            "annualEventV2": false,
+            "earlyAccessEvent": false,
+            "isEarlyAccessItem": false,
+            "eventAttributes": {
+                "priceFlip": false,
+                "specialBuy": false
+            },
+            "itemType": null,
+            "groupMetaData": null,
+            "imageInfo": {
+                "thumbnailUrl": "https://i5.walmartimages.com/asr/a6cebddc-c963-4b55-ae61-6e68e5012f0f.26b3e9eb53ce3cc42d4c09077502e664.jpeg",
+                "id": "4CDA4CD09D304E9889D573E17723A5DC",
+                "name": "a6cebddc-c963-4b55-ae61-6e68e5012f0f.26b3e9eb53ce3cc42d4c09077502e664.jpeg"
+            },
+            "numberOfReviews": 1377,
+            "offerId": "C45313B805534A729D75B8E2320F8F18",
+            "orderMinLimit": 1,
+            "orderLimit": 100,
+            "weightIncrement": 1,
+            "p13nDataV1": {
+                "predictedQuantity": null,
+                "flags": null
+            },
+            "previouslyPurchased": null,
+            "preOrder": {
+                "isPreOrder": false
+            },
+            "priceInfo": {
+                "currentPrice": {
+                    "price": 39.97,
+                    "priceString": "$39.97",
+                    "variantPriceString": "$39.97",
+                    "currencyUnit": null,
+                    "bestValue": null,
+                    "priceDisplay": "Now $39.97"
+                },
+                "listPrice": null,
+                "subscriptionPrice": null,
+                "shipPrice": null,
+                "priceDisplayCodes": {
+                    "clearance": false,
+                    "eligibleForAssociateDiscount": false,
+                    "finalCostByWeight": null,
+                    "priceDisplayCondition": null,
+                    "reducedPrice": false,
+                    "rollback": false,
+                    "submapType": null
+                },
+                "priceRange": null,
+                "unitPrice": null,
+                "wasPrice": {
+                    "price": 105,
+                    "priceString": "$105.00",
+                    "variantPriceString": null,
+                    "currencyUnit": null,
+                    "bestValue": null
+                },
+                "comparisonPrice": null,
+                "savingsAmount": {
+                    "priceString": "SAVE $65.03"
+                },
+                "capType": null,
+                "walmartFundedAmount": null,
+                "wPlusEarlyAccessPrice": null
+            },
+            "promoDiscount": null,
+            "rhPath": null,
+            "category": {
+                "categoryPath": "Home Page/Premium Beauty/Premium Fragrance/Premium Perfume for Women",
+                "categoryPathId": "0:7924299:9678309:1525986"
+            },
+            "type": null,
+            "salesUnit": "Each",
+            "sellerId": "A17759E9E0EF4F7B9B54EC17FA9EB8AA",
+            "sellerName": null,
+            "hasSellerBadge": null,
+            "seller": null,
+            "shippingOption": {
+                "slaTier": null,
+                "shipMethod": null
+            },
+            "quickShop": null,
+            "quickShopCTALabel": null,
+            "showOptions": false,
+            "snapEligible": false,
+            "sponsoredProduct": null,
+            "usItemId": "34041822",
+            "variantCount": null,
+            "variantCriteria": null
+        }
+    ]
+}

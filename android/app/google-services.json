@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "617427217472",
+    "project_id": "closethunt-b412a",
+    "storage_bucket": "closethunt-b412a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617427217472:android:8a0b0b9be68570cad043a5",
+        "android_client_info": {
+          "package_name": "com.example.mall"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa8yhnU4R54jjeAi9c75UWhSwTHJaBT5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
