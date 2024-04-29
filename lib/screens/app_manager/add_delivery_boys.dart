@@ -24,8 +24,13 @@ class _AddDeliveryBoysState extends State<AddDeliveryBoys> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff1D1F33),
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text("All Delivery Boy(s)"),
+        title: Text("All Delivery Boys"),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
       ),
       body: StreamBuilder(
           stream: Auth.deliveryRef.snapshots(),
@@ -35,35 +40,48 @@ class _AddDeliveryBoysState extends State<AddDeliveryBoys> {
                 return ListView.builder(
                     itemCount: snapshot.data?.docs.length,
                     itemBuilder: (context, index) {
-                      print(index);
-                      print("kjkhjkh");
-                      print(snapshot.data?.docs[index]['id']);
-                      print(snapshot.data?.docs.length);
-                      int i = int.parse(snapshot.data?.docs[index]['id']) + 1;
+                      int i = int.parse(snapshot.data!.docs[index]['id']
+                              .toString()
+                              .substring(
+                                  1,
+                                  snapshot.data?.docs[index]['id']
+                                      .toString()
+                                      .length)) +
+                          1;
                       id = i.toString();
-                      print("the id is ${id}");
-                      return ListTile(
-                        leading: CircleAvatar(child: Icon(Icons.person)),
-                        title: Text(snapshot.data!.docs[index]['name']),
-                        subtitle: Text(snapshot.data!.docs[index]['phone']),
-                        // trailing: IconButton(
-                        //     icon: Icon(Icons.more_vert),
-                        //     onPressed: () {
-                        //       showDetailDialog(
-                        //           context,
-                        //           snapshot.data!.docs[index]['name'],
-                        //           snapshot.data!.docs[index]['email'],
-                        //           snapshot.data!.docs[index]['id'],
-                        //           snapshot.data!.docs[index]['phone']);
-                        //     }),
-                        trailing: PopupMenuButton(
-                          icon: Icon(Icons.more_vert),
-                          itemBuilder: (context) => [
-                            PopupMenuItem(
-                                child: ListTile(
-                                  title: Text('View Details'),
-                                ))
-                          ],
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListTile(
+                          tileColor: Colors.grey.shade200,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                          leading: CircleAvatar(
+                            child: Icon(Icons.person),
+                            backgroundColor: Color(0xff1D1F33),
+                          ),
+                          title: Text(snapshot.data!.docs[index]['name']),
+                          subtitle: Text(snapshot.data!.docs[index]['phone']),
+                          trailing: PopupMenuButton(
+                            icon: Icon(
+                              Icons.more_vert,
+                              color: Color(0xff1D1F33),
+                            ),
+                            itemBuilder: (context) => [
+                              PopupMenuItem(
+                                  child: ListTile(
+                                title: Text('View Details'),
+                                onTap: () {
+                                  Navigator.pop(context);
+                                  showDetailDialog(
+                                      context,
+                                      snapshot.data!.docs[index]['name'],
+                                      snapshot.data!.docs[index]['email'],
+                                      snapshot.data!.docs[index]['id'],
+                                      snapshot.data!.docs[index]['phone']);
+                                },
+                              )),
+                            ],
+                          ),
                         ),
                       );
                     });
@@ -83,10 +101,14 @@ class _AddDeliveryBoysState extends State<AddDeliveryBoys> {
             }
           }),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color(0xff1D1F33),
+        shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.white),
+            borderRadius: BorderRadius.circular(30)),
         onPressed: () {
-          addDeliveryBoy(context, id == null ? '1' : id!);
+          addDeliveryBoy(context, id == null ? 'D1' : id!);
         },
-        child: Icon(Icons.add),
+        child: Text('Add'),
       ),
     );
   }
@@ -123,7 +145,7 @@ class _AddDeliveryBoysState extends State<AddDeliveryBoys> {
                             controller: nameController,
                             decoration: InputDecoration(
                                 hintText: "abc",
-                                label: Text("Your Name"),
+                                label: Text("Name"),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 prefixIcon:

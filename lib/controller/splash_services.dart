@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mall/screens/app_manager/app_manager_home.dart';
 import 'package:mall/screens/auth_ui/login_screen.dart';
-import 'package:mall/screens/shop_manager/parlor_display.dart';
-import 'package:mall/screens/customer/customer_home.dart';
 import 'package:mall/screens/shop_manager/shop_manager_home.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../screens/customer/rive/NavigationPoint.dart';
 import '../screens/delivery/delivery_home.dart';
 import 'auth.dart';
 
@@ -18,47 +17,44 @@ class SplashServices {
         type = "Customer";
         Future.delayed(
             Duration(seconds: 5),
-                () =>
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CustomerHome(),
-                    )));
+                () => Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => NavigationPoint(),
+                )));
       } else if (await pref?.getString('type') == 'Shop Manager') {
         type = "Shop Keeper";
         Future.delayed(
             Duration(seconds: 5),
-                () =>
-                Navigator.push(context,
-                    MaterialPageRoute(
-                        builder: (context) => ShopManagerHome())));
+                () => Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => ShopManagerHome())));
       } else if (await pref?.getString('type') == 'App Manager') {
         type = "App Manager";
         Future.delayed(
             Duration(seconds: 5),
-                () =>
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AppManagerHome())));
+                () => Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => AppManagerHome())));
       } else if (await pref?.getString('type') == 'Delivery Person') {
         type = "Delivery Person";
         Future.delayed(
             Duration(seconds: 5),
-                () =>
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DeliveryHome(
+                () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => DeliveryHome(
                       email: pref?.getString('email'),
                       password: pref?.getString('password'),
-                      id: pref?.getString('id'),))));
+                      id: pref?.getString('id'),
+                    ))));
       }
     } else {
       Future.delayed(
           Duration(seconds: 5),
-              () =>
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
-                  )));
+              () => Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LoginScreen(),
+              )));
     }
   }
 }

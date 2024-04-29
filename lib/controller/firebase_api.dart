@@ -34,10 +34,18 @@ class FirebaseApi {
       String? bookingId,
       String? shopId,
       ServiceModel? serviceModel,
+        String staff = 'none',
       double? amount,
       String? date,
       String? time,
       String? mode,
+      String? address,
+      String? shopName,
+      String? slotType,
+
+      int? guests,
+      bool restaurant = false,
+      bool reserve = false,
       List<ProductModel>? productModel,
       String? orderId}) async {
     print("RECEIVER ${recToken}");
@@ -68,91 +76,112 @@ class FirebaseApi {
       print('Response status: ${response.statusCode}');
       print('Response body: ${response.body}');
       if (bookingId == null) {
-        if (productId != "") {
-          await Auth.appManagerRef
-              .doc(uid)
-              .collection('notifications')
-              .doc(uid)
-              .collection('shopping')
-              .doc(orderId! + 1.toString())
-              .set({
-            'amount': amount,
-            'date': orderId + 1.toString(),
-            'name': name,
-            'msg': msg,
-            'customerId': userId,
-            'phone': phno,
-            'email': email,
-            'productId': productId.toString(),
-            'sellerId':shopId,
-            'mode': mode,
-            'assigned': false,
-            'cancelled': false,
-            'delivered':false
-          });
-        } else {
+        await Auth.appManagerRef
+            .doc(uid)
+            .collection('notifications')
+            .doc(uid)
+            .collection('shopping')
+            .doc(orderId)
+            .set({
+          'amount': amount,
+          'orderId': orderId,
+          'name': name,
+          'msg': msg,
+          'mode': mode
+        });
+        for (int i = 0; i < productModel!.length; i++) {
           await Auth.appManagerRef
               .doc(uid)
               .collection('notifications')
               .doc(uid)
               .collection('shopping')
               .doc(orderId)
+              .collection('products')
+              .doc(orderId! + (i + 1).toString())
               .set({
-            'amount': amount,
-            'orderId': orderId,
+            'amount': productModel[i].perprice,
+            'orderId': orderId + (i + 1).toString(),
             'name': name,
             'msg': msg,
-            'productId': productId,
-            'mode':mode
+            'customerId': userId,
+            'phone': phno,
+            'email': email,
+            'productId': productModel[i].productId,
+            'sellerId': productModel[i].sellerId,
+            'mode': mode,
+            'assigned': false,
+            'cancelled': false,
+            'delivered': false,
+            'address': address
           });
-          for (int i = 0; i < productModel!.length; i++) {
+        }
+      } else {
+        if (restaurant == false) {
+          await Auth.appManagerRef
+              .doc(uid)
+              .collection('notifications')
+              .doc(uid)
+              .collection('booking')
+              .doc(bookingId)
+              .set({
+            'date': date,
+            'name': name,
+            'msg': msg,
+            'customerId': userId,
+            'phone': phno,
+            'email': email,
+            'bookingId': bookingId.toString(),
+            'shopId': shopId,
+            'serviceId': serviceModel!.serviceId,
+            'serviceName': serviceModel.serviceName,
+            'servicePrice': serviceModel.servicePrice,
+            'time': time,
+            'staff':staff,
+            'cancelled': false
+          });
+        } else {
+          if (reserve == false) {
             await Auth.appManagerRef
                 .doc(uid)
                 .collection('notifications')
                 .doc(uid)
-                .collection('shopping')
-                .doc(orderId)
-                .collection('products')
-                .doc(orderId! + (i + 1).toString())
+                .collection('payments')
+                .doc(bookingId)
                 .set({
-              'amount': productModel[i].perprice,
-              'date': orderId + (i + 1).toString(),
+              'amount': amount,
+              'date': date,
               'name': name,
               'msg': msg,
               'customerId': userId,
               'phone': phno,
               'email': email,
-              'productId': productModel[i].productId,
-              'sellerId': productModel[i].sellerId,
-              'mode': mode,
-              'assigned': false,
-              'cancelled': false,
-              'delivered':false
+              'paymentId': bookingId.toString(),
+              'shopId': shopId,
+              'shopName': shopName
+            });
+          } else {
+            await Auth.appManagerRef
+                .doc(uid)
+                .collection('notifications')
+                .doc(uid)
+                .collection('booking')
+                .doc(bookingId)
+                .set({
+              'date': date,
+              'slotType': slotType,
+              'guests': guests,
+              'time': time,
+              'name': name,
+              'msg': msg,
+              'customerId': userId,
+              'phone': phno,
+              'email': email,
+              'bookingId': bookingId.toString(),
+              'shopId': shopId,
+              'cancelled': false
             });
           }
         }
-      } else {
-        await Auth.appManagerRef
-            .doc(uid)
-            .collection('notifications')
-            .doc(uid)
-            .collection('booking')
-            .doc(bookingId)
-            .set({
-          'date': date,
-          'name': name,
-          'msg': msg,
-          'customerId': userId,
-          'phone': phno,
-          'email': email,
-          'bookingId': bookingId.toString(),
-          'shopId': shopId,
-          'serviceId': serviceModel!.serviceId,
-          'serviceName': serviceModel.serviceName,
-          'servicePrice': serviceModel.servicePrice,
-          'time': time,
-          'cancelled': false
-        });
       }
     } catch (e) {
       print("Error $e");
@@ -162,12 +191,18 @@ class FirebaseApi {
   static Future<void> shopNotification(String name, List id, String msg,
       String userId, String phno, String email, List rev,
       {ServiceModel? serviceModel,
+      String staff = 'none',
       String? bookingId,
       String? shopId,
       List<ProductModel>? productModel,
       String? time,
       String? date,
       String? mode,
+      double? amount,
+      String? slotType,
+      int? guests,
+      bool restaurant = false,
+      bool reserve = false,
       String? orderId}) async {
     for (int i = 0; i < id.length; i++) {
       print("RECEIVER ${id[i]}");
@@ -184,8 +219,6 @@ class FirebaseApi {
                       "key = AAAAj8GHrEA:APA91bFSuKhymZ5QldzESyvgMY_G3oBCbuCAtVOeWOkPiYjDiQiU3eM6Jiayk0T3jUw5mDhCdatte1lIabdZ0UZtrcng4AliVUXMflAxSxJaGqkrj2TfFf4tj7h2x0vpn-8Fb2fyH8Dv"
                 },
                 body: jsonEncode(body));
-        print('Response status: ${response.statusCode}');
-        print('Response body: ${response.body}');
         if (bookingId == null) {
           await Auth.shopManagerRef
               .doc(productModel![i].sellerId.toString())
@@ -208,26 +241,70 @@ class FirebaseApi {
             'deliveryTime': productModel[i].deliveryTime ?? "",
             'mode': mode,
           });
-        } else {
-          await Auth.shopManagerRef
-              .doc(shopId.toString())
-              .collection('notifications')
-              .doc(bookingId)
-              .set({
-            'date': date,
-            'name': name,
-            'msg': msg,
-            'customerId': userId,
-            'phone': phno,
-            'email': email,
-            'bookingId': bookingId.toString(),
-            'shopId': shopId,
-            'serviceId': serviceModel!.serviceId,
-            'serviceName': serviceModel.serviceName,
-            'servicePrice': serviceModel.servicePrice,
-            'time': time,
-            'cancelled': false
+          await Auth.productRef.doc(productModel[i].productId).update({
+            'orderLimit':
+                productModel[i].orderLimit! - productModel[i].quantity!
           });
+        } else {
+          if (restaurant == false) {
+            await Auth.shopManagerRef
+                .doc(shopId.toString())
+                .collection('notifications')
+                .doc(bookingId)
+                .set({
+              'date': date,
+              'name': name,
+              'msg': msg,
+              'customerId': userId,
+              'phone': phno,
+              'email': email,
+              'bookingId': bookingId.toString(),
+              'shopId': shopId,
+              'serviceId': serviceModel!.serviceId,
+              'serviceName': serviceModel.serviceName,
+              'servicePrice': serviceModel.servicePrice,
+              'staff': staff,
+              'time': time,
+              'cancelled': false
+            });
+          } else {
+            if (reserve == false) {
+              await Auth.shopManagerRef
+                  .doc(shopId.toString())
+                  .collection('payments')
+                  .doc(bookingId)
+                  .set({
+                'amount': amount,
+                'date': date,
+                'name': name,
+                'msg': msg,
+                'customerId': userId,
+                'phone': phno,
+                'email': email,
+                'paymentId': bookingId.toString(),
+                'shopId': shopId,
+              });
+            } else {
+              await Auth.shopManagerRef
+                  .doc(shopId)
+                  .collection('notifications')
+                  .doc(bookingId)
+                  .set({
+                'date': date,
+                'slotType': slotType,
+                'guests': guests,
+                'time': time,
+                'name': name,
+                'msg': msg,
+                'customerId': userId,
+                'phone': phno,
+                'email': email,
+                'bookingId': bookingId.toString(),
+                'shopId': shopId,
+                'cancelled': false
+              });
+            }
+          }
         }
       } catch (e) {
         print("Error $e");
@@ -285,8 +362,8 @@ class FirebaseApi {
         "to": token,
         //this will vary
         "notification": {
-          "title": "Booking-Cancellation",
-          "body": "Your booking ${bookingId} is cancelled",
+          "title": "Cancellation",
+          "body": "${bookingId} is cancelled",
           "android_channel_id": "mall"
         },
         "data": {
@@ -319,25 +396,15 @@ class FirebaseApi {
         }
       } else {
         if (forAppManager) {
-          if (exists == true) {
-            await Auth.appManagerRef
-                .doc(uid)
-                .collection('notifications')
-                .doc(uid)
-                .collection('shopping')
-                .doc(orderId.substring(0, orderId.length - 1))
-                .collection('products')
-                .doc(orderId)
-                .update({'cancelled': true});
-          } else {
-            await Auth.appManagerRef
-                .doc(uid)
-                .collection('notifications')
-                .doc(uid)
-                .collection('shopping')
-                .doc(orderId)
-                .update({'cancelled': true});
-          }
+          await Auth.appManagerRef
+              .doc(uid)
+              .collection('notifications')
+              .doc(uid)
+              .collection('shopping')
+              .doc(orderId.substring(0, orderId.length - 1))
+              .collection('products')
+              .doc(orderId)
+              .update({'cancelled': true});
         } else {
           await Auth.shopManagerRef
               .doc(uid)

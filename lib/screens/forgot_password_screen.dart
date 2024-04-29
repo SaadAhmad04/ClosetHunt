@@ -35,78 +35,80 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
           backgroundColor: Colors.transparent,
           elevation: 0.0,
         ),
-        body: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: mq.height*.15,left: mq.width*.05),
-              //color: Colors.blue,
-              child: Text("Forgot your password ?",
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: mq.height*.15,left: mq.width*.05),
+                //color: Colors.blue,
+                child: Text("Forgot your password ?",
 
-                style: TextStyle(
-                  fontSize: 22,
+                  style: TextStyle(
+                    fontSize: 22,
 
-                ),),
-            ),
-            Container(
-              //color: Colors.pink,
-              margin: EdgeInsets.only(top: mq.height*.02,left: mq.width*.02),
-              child: Text("\t\t Entered your registered email below \n to receive password reset instructions",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey,
-                ),),
-            ),
-            Center(
-              child: Container(
-                margin: EdgeInsets.only(top: mq.height*.07),
-                height: mq.height*0.24,
-                child: ClipOval(
-                    child: Image.network("https://i.pinimg.com/1200x/d1/5b/31/d15b31eef4348435de616adb3c371dfe.jpg")),
+                  ),),
               ),
-            ),
-            SizedBox(height: mq.height*.04),
-            SingleChildScrollView(
-              child: Container(
-                child: Column(
-
-                  children: [
-                    Form(
-                        key: _formKey,
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: TextFormField(
-
-                            controller: emailController,
-                            decoration: InputDecoration(
-
-                              prefixIcon: Icon(Icons.alternate_email_outlined),
-                              hintText: 'Email',
-                            ),
-                            validator: (value){
-                              if(value!.isEmpty){
-                                return 'Enter email';
-                              }
-                              return null;
-                            },
-                          ),
-                        )
-                    ),
-                    SizedBox(height: mq.height*0.02,),
-                    RoundButton(
-                        title: 'Send Verification Email',
-                        onTap: () {
-                          if(_formKey.currentState!.validate()){
-                            CircularProgressIndicator();
-                            Auth.forgotpassword(emailController.text);
-                          }
-                        })
-                  ],
+              Container(
+                //color: Colors.pink,
+                margin: EdgeInsets.only(top: mq.height*.02,left: mq.width*.02),
+                child: Text("\t\t Entered your registered email below \n to receive password reset instructions",
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
+                  ),),
+              ),
+              Center(
+                child: Container(
+                  margin: EdgeInsets.only(top: mq.height*.07),
+                  height: mq.height*0.24,
+                  child: ClipOval(
+                      child: Image.network("https://i.pinimg.com/1200x/d1/5b/31/d15b31eef4348435de616adb3c371dfe.jpg")),
                 ),
               ),
-            )
+              SizedBox(height: mq.height*.04),
+              SingleChildScrollView(
+                child: Container(
+                  child: Column(
+
+                    children: [
+                      Form(
+                          key: _formKey,
+                          child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: TextFormField(
+
+                              controller: emailController,
+                              decoration: InputDecoration(
+
+                                prefixIcon: Icon(Icons.alternate_email_outlined),
+                                hintText: 'Email',
+                              ),
+                              validator: (value){
+                                if(value!.isEmpty){
+                                  return 'Enter email';
+                                }
+                                return null;
+                              },
+                            ),
+                          )
+                      ),
+                      SizedBox(height: mq.height*0.02,),
+                      RoundButton(
+                          title: 'Send Verification Email',
+                          onTap: () {
+                            if(_formKey.currentState!.validate()){
+                              CircularProgressIndicator();
+                              Auth.forgotpassword(emailController.text);
+                            }
+                          })
+                    ],
+                  ),
+                ),
+              )
 
 
-          ],
+            ],
+          ),
         ),
 
 

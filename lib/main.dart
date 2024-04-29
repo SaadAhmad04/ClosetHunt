@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -7,7 +6,9 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_notification_channel/flutter_notification_channel.dart';
 import 'package:flutter_notification_channel/notification_importance.dart';
 import 'package:flutter_notification_channel/notification_visibility.dart';
+import 'package:mall/firebase_options.dart';
 import 'package:mall/screens/splash_screen.dart';
+import 'package:mall/simple.dart';
 import 'package:mall/simple.dart';
 
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
 }
 
 _initializeFirebase() async {
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   var result = await FlutterNotificationChannel.registerNotificationChannel(
     description: 'For showing order notification',
     id: 'mall',

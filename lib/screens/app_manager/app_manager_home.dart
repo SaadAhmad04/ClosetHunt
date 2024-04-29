@@ -2,9 +2,11 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:mall/screens/app_manager/booking/booking.dart';
-import 'package:mall/screens/app_manager/shopping/shopkeeper_without_shops.dart';
-import 'package:mall/screens/app_manager/shopping/view_shop.dart';
+import 'package:mall/screens/app_manager/analysis.dart';
+import 'package:mall/screens/app_manager/refund.dart';
+import 'package:mall/screens/app_manager/shopkeeper_without_shops.dart';
+import 'package:mall/screens/app_manager/summary.dart';
+import 'package:mall/screens/app_manager/view_shop.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -12,7 +14,6 @@ import '../../controller/firebase_api.dart';
 import '../../controller/auth.dart';
 import '../../main.dart';
 import 'add_delivery_boys.dart';
-import 'assign_delivery.dart';
 import 'notification.dart';
 
 class AppManagerHome extends StatefulWidget {
@@ -25,7 +26,7 @@ class AppManagerHome extends StatefulWidget {
 class _AppManagerHomeState extends State<AppManagerHome>
     with TickerProviderStateMixin {
   late AnimationController controller;
-  String? tok;
+  String? tok , name , email;
 
   Future<String> Found() async {
     final token = await FirebaseApi.initNotifications();
@@ -37,7 +38,7 @@ class _AppManagerHomeState extends State<AppManagerHome>
     final pref = await SharedPreferences.getInstance();
     await pref.setString('type', 'App Manager');
     tok = await Found();
-    print("GDFASF${tok}");
+    print("GDFASF${pref.getString('name')}");
   }
 
   @override
@@ -104,10 +105,11 @@ class _AppManagerHomeState extends State<AppManagerHome>
                 itemCount: snapshot.data!.docs.length,
                 itemBuilder: (context, index) {
                   if (snapshot.data!.docs[index]['type'] == 'App Manager') {
+                    name = snapshot.data?.docs[index]['name'];
+                    email = snapshot.data?.docs[index]['email'];
                     return FutureBuilder(
                         future: getType(),
                         builder: (context, snapshot) {
-                          //print("AMITTTTTTTTTTTTTTTTTTTTTTTT${tok.toString()}");
                           Auth.appManagerRef
                               .doc(Auth.auth.currentUser?.uid)
                               .update({
@@ -141,19 +143,16 @@ class _AppManagerHomeState extends State<AppManagerHome>
                           decoration: BoxDecoration(
                               gradient: LinearGradient(
                                   colors: [
-                                    // Colors.pinkAccent,
-                                    // Colors.deepOrange,
                                     Color(0xff014871),
-
                                     Color(0xffa0ebcf)
                                   ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                   stops: const [0.2, 0.9])),
-                          accountName: Text('Saad'),
-                          accountEmail: Text('saad@gmail.com'),
+                          accountName: Text('${name}'),
+                          accountEmail: Text('${email}'),
                           currentAccountPicture: CircleAvatar(
-                            child: Text("SA"),
+                            child: Text("A"),
                             foregroundColor: Colors.white,
                             backgroundColor: Colors.white24,
                           ),
@@ -176,10 +175,10 @@ class _AppManagerHomeState extends State<AppManagerHome>
                     ),
                     ListTile(
                       leading: Icon(
-                        Icons.shop,
+                        Icons.add_shopping_cart,
                         color: Colors.black,
                       ),
-                      title: Text('Add Shops',
+                      title: Text('Assign Shops',
                           style: TextStyle(color: Colors.black, fontSize: 15)),
                       onTap: () {
                         Navigator.pop(context);
@@ -207,6 +206,17 @@ class _AppManagerHomeState extends State<AppManagerHome>
                       },
                     ),
                     ListTile(
+                      leading: Icon(Icons.currency_rupee, color: Colors.black),
+                      title: Text("Refund",
+                          style: TextStyle(color: Colors.black, fontSize: 15)),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Refund()));
+                      },
+                    ),
+                    ListTile(
                       leading: Icon(
                         Icons.person,
                         color: Colors.black,
@@ -223,40 +233,28 @@ class _AppManagerHomeState extends State<AppManagerHome>
                     ),
                     ListTile(
                       leading: Icon(
-                        Icons.reorder,
+                        Icons.analytics,
                         color: Colors.black,
                       ),
-                      title: Text('Assign order',
+                      title: Text('Analysis',
                           style: TextStyle(color: Colors.black, fontSize: 15)),
                       onTap: () {
                         Navigator.pop(context);
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => AssignDelivery()));
+                                builder: (context) => Analysis()));
                       },
                     ),
                     ListTile(
-                      leading: Icon(
-                        Icons.settings,
-                        color: Colors.black,
-                      ),
-                      title: Text('Settings',
+                      leading: Icon(Icons.summarize_outlined, color: Colors.black),
+                      title: Text("Summary",
                           style: TextStyle(color: Colors.black, fontSize: 15)),
                       onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      leading: Icon(
-                        Icons.book_outlined,
-                        color: Colors.black,
-                      ),
-                      title: Text('Booking',
-                          style: TextStyle(color: Colors.black, fontSize: 15)),
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Booking()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Summary()));
                       },
                     ),
                     ListTile(

@@ -56,6 +56,7 @@ class _VerifyProductState extends State<VerifyProduct> {
             otpSent = false;
             setState(() {});
             // You can add additional logic here when the timer is completed
+            resetTimer();
             print('Timer completed!');
           }
         });
@@ -68,11 +69,12 @@ class _VerifyProductState extends State<VerifyProduct> {
     // Reset the timer
     if (_timer!.isActive) {
       _timer!.cancel();
-    } else if (!_timer!.isActive) {}
-    setState(() {
-      seconds = 0;
-      isTimerRunning = false;
-    });
+    } else if (!_timer!.isActive) {
+      setState(() {
+        seconds = 0;
+        isTimerRunning = false;
+      });
+    }
   }
 
   String formatTime(int timeInSeconds) {
@@ -94,195 +96,171 @@ class _VerifyProductState extends State<VerifyProduct> {
       int date = int.parse(widget.dateOfDelivery!);
       dateTime = DateTime.fromMillisecondsSinceEpoch(date);
     }
-    return widget.delivered == true
-        ? Scaffold(
-            body: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Card(
-                margin: EdgeInsets.symmetric(vertical: mq.height * .15),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    side: BorderSide(color: Colors.grey, width: 1)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Pick up details',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18),
-                    ),
-                    SizedBox(
-                      height: mq.height * .05,
-                    ),
-                    ListTile(
-                      title: Text('Order Id'),
-                      trailing: Text('${widget.orderId}'),
-                    ),
-                    ListTile(
-                      title: Text('Customer Id'),
-                      trailing: Text('${widget.customerId}'),
-                    ),
-                    ListTile(
-                      title: Text('Date of pick up'),
-                      trailing: Text(
-                          '${dateTime!.day}-${dateTime!.month}-${dateTime!.year}'),
-                    ),
-                    Text(
-                      'Picked up',
-                      style: TextStyle(
-                          color: Colors.green.shade400,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
+    return StreamBuilder(
+        stream: Auth.customerRef.doc(widget.customerId).snapshots(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData && snapshot.data != null) {
+            String token = snapshot.data?['token'];
+            return Scaffold(
+                backgroundColor: Color(0xff1D1F33),
+                extendBodyBehindAppBar: true,
+                appBar: AppBar(
+                  backgroundColor: Colors.transparent,
+                  title: Text('Verify Product'),
+                  elevation: 0,
+                  centerTitle: true,
                 ),
-              ),
-            ),
-          )
-        : StreamBuilder(
-            stream: Auth.customerRef.doc(widget.customerId).snapshots(),
-            builder: (context, snapshot) {
-              if (snapshot.hasData && snapshot.data != null) {
-                String token = snapshot.data?['token'];
-                return Scaffold(
-                    appBar: AppBar(
-                      title: Text('${widget.orderId}'),
-                      centerTitle: true,
-                    ),
-                    body: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            otpSent
-                                ? TextField(
-                                    controller: otpController,
-                                    keyboardType: TextInputType.phone,
-                                    decoration: InputDecoration(
-                                        prefixIcon: Icon(Icons.code),
-                                        border: OutlineInputBorder()),
-                                  )
-                                : SizedBox(),
-                            SizedBox(
-                              height: 30,
-                            ),
-                            Text(
-                              'Time Remaining: ${formatTime(totalSeconds - seconds)}',
-                              style: TextStyle(fontSize: 24),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: SizedBox(
-                                height: 50,
-                              ),
-                            ),
-                            otpSent == false
-                                ? InkWell(
-                                    onTap: () async {
-                                      setState(() {
-                                        if (otpSent == false) {
-                                          otpSent = true;
-                                          startTimer();
-                                        } else {
-                                          otpSent = false;
-                                        }
-                                      });
-                                      otp = await FirebaseApi.otpNotification(
-                                          token);
-                                    },
-                                    child: Container(
-                                      height: 40,
-                                      width: 80,
-                                      decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      child: Center(
-                                        child: Text('Send OTP'),
-                                      ),
-                                    ),
-                                  )
-                                : SizedBox(),
-                            SizedBox(height: 20),
-                            InkWell(
-                              onTap: () async {
-                                setState(() {
-                                  loading = true;
-                                });
-                                if (otp == int.parse(otpController.text)) {
-                                  final date = DateTime.now()
-                                      .millisecondsSinceEpoch
-                                      .toString();
-                                  await Auth.customerRef
-                                      .doc(widget.customerId)
-                                      .collection('orders')
-                                      .doc(widget.orderId)
-                                      .update({
-                                    'delivered': true,
-                                    'dateOfPickup': date
-                                  });
-                                  if (widget.stream == 1) {
-                                    await Auth.appManagerRef
-                                        .doc(Auth.auth.currentUser!.uid)
-                                        .collection('notifications')
-                                        .doc(Auth.auth.currentUser!.uid)
-                                        .collection('shopping')
-                                        .doc(widget.orderId)
-                                        .update({
-                                      'delivered': true,
-                                      'dateOfPickup': date
-                                    });
-                                  } else {
-                                    await Auth.appManagerRef
-                                        .doc(Auth.auth.currentUser!.uid)
-                                        .collection('notifications')
-                                        .doc(Auth.auth.currentUser!.uid)
-                                        .collection('shopping')
-                                        .doc(widget.orderId?.substring(
-                                            0, widget.orderId!.length - 1))
-                                        .collection('products')
-                                        .doc(widget.orderId)
-                                        .update({
-                                      'delivered': true,
-                                      'dateOfPickup': date
-                                    });
-                                  }
-                                  setState(() {
-                                    loading = false;
-                                  });
-                                  Navigator.pop(context);
-                                  Utilities().showMessage('Order picked up');
-                                } else {
-                                  Utilities().showMessage('Wrong OTP entered');
-                                }
-                              },
-                              child: Container(
-                                height: 40,
-                                width: 180,
-                                decoration: BoxDecoration(
-                                    color: Colors.green.shade400,
-                                    borderRadius: BorderRadius.circular(15)),
-                                child: Center(
-                                  child: loading == true
-                                      ? CircularProgressIndicator()
-                                      : Text(
-                                          'Verify',
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                ),
-                              ),
-                            )
-                          ],
+                body: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Order Id - ${widget.orderId}',
+                          style: TextStyle(
+                              color: Colors.blue.shade600,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
                         ),
-                      ),
-                    ));
-              } else {
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              }
-            });
+                        SizedBox(
+                          height: mq.height * .05,
+                        ),
+                        otpSent
+                            ? TextField(
+                                controller: otpController,
+                                keyboardType: TextInputType.phone,
+                                decoration: InputDecoration(
+                                    hintText: '4 digit code',
+                                    hintStyle:
+                                        TextStyle(color: Colors.grey.shade300),
+                                    prefixIcon: Icon(
+                                      Icons.code,
+                                      color: Colors.white,
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                        borderSide:
+                                            BorderSide(color: Colors.white))),
+                              )
+                            : SizedBox(),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Text(
+                          'Time Remaining: ${formatTime(totalSeconds - seconds)}',
+                          style: TextStyle(fontSize: 24, color: Colors.white),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            height: 50,
+                          ),
+                        ),
+                        otpSent == false
+                            ? InkWell(
+                                onTap: () async {
+                                  setState(() {
+                                    if (otpSent == false) {
+                                      otpSent = true;
+                                      startTimer();
+                                    } else {
+                                      otpSent = false;
+                                    }
+                                  });
+                                  otp =
+                                      await FirebaseApi.otpNotification(token);
+                                },
+                                child: Container(
+                                  height: 40,
+                                  width: 80,
+                                  decoration: BoxDecoration(
+                                      color: Colors.blue,
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: Center(
+                                    child: Text('Send OTP'),
+                                  ),
+                                ),
+                              )
+                            : SizedBox(),
+                        SizedBox(height: 20),
+                        InkWell(
+                          onTap: () async {
+                            setState(() {
+                              loading = true;
+                            });
+                            if (otp == int.parse(otpController.text)) {
+                              final date = DateTime.now()
+                                  .millisecondsSinceEpoch
+                                  .toString();
+                              await Auth.customerRef
+                                  .doc(widget.customerId)
+                                  .collection('orders')
+                                  .doc(widget.orderId)
+                                  .update({
+                                'delivered': true,
+                                'dateOfPickup': date
+                              });
+                              if (widget.stream == 1) {
+                                await Auth.appManagerRef
+                                    .doc(Auth.auth.currentUser!.uid)
+                                    .collection('notifications')
+                                    .doc(Auth.auth.currentUser!.uid)
+                                    .collection('shopping')
+                                    .doc(widget.orderId)
+                                    .update({
+                                  'delivered': true,
+                                  'dateOfPickup': date
+                                });
+                              } else {
+                                await Auth.appManagerRef
+                                    .doc(Auth.auth.currentUser!.uid)
+                                    .collection('notifications')
+                                    .doc(Auth.auth.currentUser!.uid)
+                                    .collection('shopping')
+                                    .doc(widget.orderId?.substring(
+                                        0, widget.orderId!.length - 1))
+                                    .collection('products')
+                                    .doc(widget.orderId)
+                                    .update({
+                                  'delivered': true,
+                                  'dateOfPickup': date
+                                });
+                              }
+                              setState(() {
+                                loading = false;
+                              });
+                              Navigator.pop(context);
+                              Utilities().showMessage('Order picked up');
+                            } else {
+                              Utilities().showMessage('Wrong OTP entered');
+                            }
+                          },
+                          child: Container(
+                            height: 40,
+                            width: 180,
+                            decoration: BoxDecoration(
+                                color: Colors.green.shade400,
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Center(
+                              child: loading == true
+                                  ? CircularProgressIndicator()
+                                  : Text(
+                                      'Verify',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ));
+          } else {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        });
   }
 }

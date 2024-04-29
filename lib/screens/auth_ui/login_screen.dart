@@ -16,11 +16,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  bool showPassword = false;
   bool loading = false;
   final emailController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   final passwordController = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Container(
                 margin:
-                    EdgeInsets.only(top: mq.height * .12, left: mq.width * .35),
+                EdgeInsets.only(top: mq.height * .12, left: mq.width * .35),
                 height: mq.height * .1,
                 child: ClipOval(
                   child: Image.asset("images/app_icon.jpeg"),
@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Container(
                 margin:
-                    EdgeInsets.only(top: mq.height * .22, left: mq.width * .27),
+                EdgeInsets.only(top: mq.height * .22, left: mq.width * .27),
                 child: Text(
                   "ClosetHunt",
                   style: TextStyle(
@@ -119,11 +119,19 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         TextFormField(
                           controller: passwordController,
-                          obscureText: true,
+                          obscureText: showPassword == false ? true : false,
                           decoration: InputDecoration(
-                            hintText: 'Password',
-                            prefixIcon: Icon(Icons.lock_open_outlined),
-                          ),
+                              hintText: 'Password',
+                              prefixIcon: Icon(Icons.password),
+                              suffixIcon: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      showPassword = !showPassword;
+                                    });
+                                  },
+                                  icon: showPassword
+                                      ? Icon(Icons.lock_open_outlined)
+                                      : Icon(Icons.lock_outline))),
                           validator: (value) {
                             if (value!.isEmpty) {
                               return 'Enter password';
@@ -150,20 +158,25 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         RoundButton(
                             title: 'Login',
+                            colors: Colors.white,
                             loading: loading,
-                            onTap: () {
+                            onTap: () async {
                               if (_formKey.currentState!.validate()) {
-                                Center(
-                                  child: CircularProgressIndicator(
-                                    color: Colors.white,
-                                    strokeWidth: 10,
-                                  ),
-                                );
-
-                                Auth.login(
-                                    emailController.text.toString(),
-                                    passwordController.text.toString(),
-                                    context);
+                                setState(() {
+                                  loading = true;
+                                });
+                                Future.delayed(
+                                    Duration(seconds: 3),
+                                        () async => await Auth.login(
+                                        emailController.text.toString(),
+                                        passwordController.text
+                                            .toString(),
+                                        context)
+                                        .then((value) {
+                                      setState(() {
+                                        loading = false;
+                                      });
+                                    }));
                               }
                             }),
                         Row(

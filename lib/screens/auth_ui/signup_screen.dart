@@ -23,6 +23,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
   FirebaseAuth auth = FirebaseAuth.instance;
+  bool showPassword = false;
 
   @override
   void dispose() {
@@ -137,11 +138,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       TextFormField(
                         controller: passwordController,
-                        obscureText: true,
+                        obscureText: showPassword == false ? true : false,
                         decoration: InputDecoration(
-                          hintText: 'Password',
-                          prefixIcon: Icon(Icons.lock_open_outlined),
-                        ),
+                            hintText: 'Password',
+                            prefixIcon: Icon(Icons.password),
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    showPassword = !showPassword;
+                                  });
+                                },
+                                icon: showPassword
+                                    ? Icon(Icons.lock_open_outlined)
+                                    : Icon(Icons.lock_outline))),
                         validator: (value) {
                           if (value!.isEmpty) {
                             return 'Enter password';
@@ -154,11 +163,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       TextFormField(
                         controller: passwordController2,
-                        obscureText: true,
+                        obscureText: showPassword == false ? true : false,
                         decoration: InputDecoration(
-                          hintText: 'Confirm Password',
-                          prefixIcon: Icon(Icons.lock_open_outlined),
-                        ),
+                            hintText: 'Confirm Password',
+                            prefixIcon: Icon(Icons.password),
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    showPassword = !showPassword;
+                                  });
+                                },
+                                icon: showPassword
+                                    ? Icon(Icons.lock_open_outlined)
+                                    : Icon(Icons.lock_outline))),
                         validator: (value) {
                           if (value!.isEmpty) {
                             return 'Enter password';
@@ -185,15 +202,37 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       RoundButton(
                           title: 'Sign Up',
+                          colors: Colors.white,
                           loading: loading,
                           onTap: () {
                             if (_formKey.currentState!.validate()) {
-                              Auth.signUp(
-                                  nameController.text,
-                                  emailController.text,
-                                  passwordController.text,
-                                  passwordController2.text,
-                                  context);
+                              setState(() {
+                                loading = true;
+                              });
+                              Future.delayed(
+                                  Duration(seconds: 3),
+                                      () async => await Auth.signUp(
+                                      nameController.text,
+                                      emailController.text,
+                                      passwordController.text,
+                                      passwordController2.text,
+                                      context)
+                                      .then((value) {
+                                    setState(() {
+                                      loading = false;
+                                    });
+                                  }));
+                              // Auth.signUp(
+                              //         nameController.text,
+                              //         emailController.text,
+                              //         passwordController.text,
+                              //         passwordController2.text,
+                              //         context)
+                              //     .then((value) {
+                              //   setState(() {
+                              //     loading = false;
+                              //   });
+                              // });
                             }
                           }),
                       Row(

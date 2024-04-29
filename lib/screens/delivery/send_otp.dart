@@ -10,24 +10,32 @@ import '../../main.dart';
 
 class SendOtp extends StatefulWidget {
   String? customerId;
+  String? customerName;
   String? orderId;
   String? id;
   String? email;
   String? pswd;
   String? appManagerId;
+  String? phone;
+  String? address;
   int? stream;
   bool? delivered;
   String? dateOfDelivery;
+  bool? cancelled;
   SendOtp(
       {super.key,
       this.customerId,
+      this.customerName,
       this.orderId,
       this.id,
       this.email,
       this.pswd,
+      this.phone,
+      this.address,
       this.stream,
       this.appManagerId,
       this.delivered,
+      this.cancelled,
       this.dateOfDelivery});
 
   @override
@@ -104,6 +112,7 @@ class _SendOtpState extends State<SendOtp> {
     }
     return widget.delivered == true
         ? Scaffold(
+            backgroundColor: Colors.purple.shade50,
             body: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
@@ -154,153 +163,188 @@ class _SendOtpState extends State<SendOtp> {
               if (snapshot.hasData && snapshot.data != null) {
                 String token = snapshot.data?['token'];
                 return Scaffold(
+                    backgroundColor: Colors.purple.shade50,
+                    extendBodyBehindAppBar: true,
                     appBar: AppBar(
-                      title: Text('${widget.orderId}'),
+                      automaticallyImplyLeading: false,
+                      backgroundColor: Colors.transparent,
+                      title: Text(
+                        'Order Id: ${widget.orderId}',
+                        style: TextStyle(color: Colors.black),
+                      ),
                       centerTitle: true,
+                      elevation: 0,
                     ),
-                    body: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            otpSent
-                                ? TextField(
-                                    controller: otpController,
-                                    keyboardType: TextInputType.phone,
-                                    decoration: InputDecoration(
-                                        prefixIcon: Icon(Icons.code),
-                                        border: OutlineInputBorder()),
-                                  )
-                                : SizedBox(),
-                            SizedBox(
-                              height: 30,
-                            ),
-                            Text(
-                              'Time Remaining: ${formatTime(totalSeconds - seconds)}',
-                              style: TextStyle(fontSize: 24),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: SizedBox(
-                                height: 50,
-                              ),
-                            ),
-                            otpSent == false
-                                ? InkWell(
-                                    onTap: () async {
-                                      setState(() {
-                                        if (otpSent == false) {
-                                          otpSent = true;
-                                          startTimer();
-                                        } else {
-                                          otpSent = false;
-                                        }
-                                      });
-                                      otp = await FirebaseApi.otpNotification(
-                                          token);
-                                    },
-                                    child: Container(
-                                      height: 40,
-                                      width: 80,
-                                      decoration: BoxDecoration(
-                                          color: Colors.blue,
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      child: Center(
-                                        child: Text('Send OTP'),
+                    body: Card(
+                      elevation: 2,
+                      margin: EdgeInsets.symmetric(
+                          vertical: mq.height * .2, horizontal: mq.width * .05),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ListTile(
+                            title: Text('Customer name'),
+                            trailing: Text('${widget.customerName}'),
+                          ),
+                          ListTile(
+                            title: Text('Phone'),
+                            trailing: Text('${widget.phone}'),
+                          ),
+                          ListTile(
+                            title: Text('Address'),
+                            trailing: Text('${widget.address}'),
+                          ),
+                          widget.cancelled == false
+                              ? Column(
+                                  children: [
+                                    otpSent
+                                        ? Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: TextField(
+                                              controller: otpController,
+                                              keyboardType: TextInputType.phone,
+                                              decoration: InputDecoration(
+                                                  prefixIcon: Icon(Icons.code),
+                                                  border: OutlineInputBorder()),
+                                            ),
+                                        )
+                                        : SizedBox(),
+                                    SizedBox(
+                                      height: 30,
+                                    ),
+                                    Text(
+                                      'Time Remaining: ${formatTime(totalSeconds - seconds)}',
+                                      style: TextStyle(fontSize: 24),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: SizedBox(
+                                        height: 50,
                                       ),
                                     ),
-                                  )
-                                : SizedBox(),
-                            SizedBox(height: 20),
-                            InkWell(
-                              onTap: () async {
-                                setState(() {
-                                  loading = true;
-                                });
-                                if (otp == int.parse(otpController.text)) {
-                                  final date = DateTime.now()
-                                      .millisecondsSinceEpoch
-                                      .toString();
-                                  await Auth.customerRef
-                                      .doc(widget.customerId)
-                                      .collection('orders')
-                                      .doc(widget.orderId)
-                                      .update({
-                                    'delivered': true,
-                                    'dateOfDelivery': date
-                                  });
-                                  await Auth.deliveryRef
-                                      .doc(widget.id)
-                                      .collection('delivered')
-                                      .doc(widget.orderId)
-                                      .set({
-                                    'customerId': widget.customerId,
-                                    'orderId': widget.orderId,
-                                    'dateOfDelivery': date
-                                  });
-                                  if (widget.stream == 1) {
-                                    await Auth.appManagerRef
-                                        .doc(widget.appManagerId)
-                                        .collection('notifications')
-                                        .doc(widget.appManagerId)
-                                        .collection('shopping')
-                                        .doc(widget.orderId)
-                                        .update({
-                                      'delivered': true,
-                                      'dateOfDelivery': date
-                                    });
-                                  } else {
-                                    await Auth.appManagerRef
-                                        .doc(widget.appManagerId)
-                                        .collection('notifications')
-                                        .doc(widget.appManagerId)
-                                        .collection('shopping')
-                                        .doc(widget.orderId?.substring(
-                                            0, widget.orderId!.length - 1))
-                                        .collection('products')
-                                        .doc(widget.orderId)
-                                        .update({
-                                      'delivered': true,
-                                      'dateOfDelivery': date
-                                    });
-                                  }
-                                  setState(() {
-                                    loading = false;
-                                  });
-                                  Navigator.pushAndRemoveUntil(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => DeliveryHome(
-                                                email: widget.email,
-                                                id: widget.id,
-                                                password: widget.pswd,
-                                              )),
-                                      (route) => false);
-                                  Utilities().showMessage('Order delivered');
-                                } else {
-                                  Utilities().showMessage('Wrong OTP entered');
-                                }
-                              },
-                              child: Container(
-                                height: 40,
-                                width: 180,
-                                decoration: BoxDecoration(
-                                    color: Colors.green.shade400,
-                                    borderRadius: BorderRadius.circular(15)),
-                                child: Center(
-                                  child: loading == true
-                                      ? CircularProgressIndicator()
-                                      : Text(
-                                          'Verify',
-                                          style: TextStyle(color: Colors.white),
+                                    otpSent == false
+                                        ? InkWell(
+                                            onTap: () async {
+                                              setState(() {
+                                                if (otpSent == false) {
+                                                  otpSent = true;
+                                                  startTimer();
+                                                } else {
+                                                  otpSent = false;
+                                                }
+                                              });
+                                              otp = await FirebaseApi
+                                                  .otpNotification(token);
+                                            },
+                                            child: Container(
+                                              height: mq.height * .05,
+                                              width: mq.width * .3,
+                                              decoration: BoxDecoration(
+                                                  color: Colors.blue,
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          20)),
+                                              child: Center(
+                                                child: Text(
+                                                  'Send OTP',
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                ),
+                                              ),
+                                            ),
+                                          )
+                                        : SizedBox(),
+                                    SizedBox(height: 20),
+                                    InkWell(
+                                      onTap: () async {
+                                        setState(() {
+                                          loading = true;
+                                        });
+                                        if (otp ==
+                                            int.parse(otpController.text)) {
+                                          final date = DateTime.now()
+                                              .millisecondsSinceEpoch
+                                              .toString();
+                                          await Auth.customerRef
+                                              .doc(widget.customerId)
+                                              .collection('orders')
+                                              .doc(widget.orderId)
+                                              .update({
+                                            'delivered': true,
+                                            'dateOfDelivery': date
+                                          });
+                                          await Auth.deliveryRef
+                                              .doc(widget.id)
+                                              .collection('delivered')
+                                              .doc(widget.orderId)
+                                              .set({
+                                            'customerId': widget.customerId,
+                                            'orderId': widget.orderId,
+                                            'dateOfDelivery': date
+                                          });
+                                          await Auth.appManagerRef
+                                              .doc(widget.appManagerId)
+                                              .collection('notifications')
+                                              .doc(widget.appManagerId)
+                                              .collection('shopping')
+                                              .doc(widget.orderId?.substring(0,
+                                                  widget.orderId!.length - 1))
+                                              .collection('products')
+                                              .doc(widget.orderId)
+                                              .update({
+                                            'delivered': true,
+                                            'dateOfDelivery': date
+                                          });
+                                          setState(() {
+                                            loading = false;
+                                          });
+                                          Navigator.pushAndRemoveUntil(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      DeliveryHome(
+                                                        email: widget.email,
+                                                        id: widget.id,
+                                                        password: widget.pswd,
+                                                      )),
+                                              (route) => false);
+                                          Utilities()
+                                              .showMessage('Order delivered');
+                                        } else {
+                                          Utilities()
+                                              .showMessage('Wrong OTP entered');
+                                        }
+                                      },
+                                      child: Container(
+                                        height: 40,
+                                        width: 180,
+                                        decoration: BoxDecoration(
+                                            color: Colors.green.shade400,
+                                            borderRadius:
+                                                BorderRadius.circular(15)),
+                                        child: Center(
+                                          child: loading == true
+                                              ? CircularProgressIndicator()
+                                              : Text(
+                                                  'Verify',
+                                                  style: TextStyle(
+                                                      color: Colors.white),
+                                                ),
                                         ),
+                                      ),
+                                    )
+                                  ],
+                                )
+                              : Text(
+                                  'Cancelled',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.red.shade600),
                                 ),
-                              ),
-                            )
-                          ],
-                        ),
+                        ],
                       ),
                     ));
               } else {

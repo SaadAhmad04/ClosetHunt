@@ -3,8 +3,7 @@ import 'dart:convert';
 ProductModel productModelFromJson(String str) =>
     ProductModel.fromJson(json.decode(str));
 
-String productModelToJson(ProductModel data) =>
-    json.encode(data.toJson());
+String productModelToJson(ProductModel data) => json.encode(data.toJson());
 
 class ProductModel {
   String? image;
@@ -16,19 +15,21 @@ class ProductModel {
   String? name;
   int? orderLimit;
   int? index;
+  String? size;
   double? perprice;
 
   ProductModel(
       {this.image,
-        this.quantity,
-        this.sellerId,
-        this.productId,
-        this.deliveryTime,
-        this.price,
-        this.name,
-        this.orderLimit,
-        this.index,
-        this.perprice});
+      this.quantity,
+      this.sellerId,
+      this.productId,
+      this.deliveryTime,
+      this.price,
+      this.name,
+      this.orderLimit,
+      this.index,
+      this.size,
+      this.perprice});
 
   ProductModel.fromJson(Map<String, dynamic> json) {
     image = json['image'];
@@ -40,6 +41,7 @@ class ProductModel {
     name = json['name'];
     orderLimit = json['orderLimit'];
     index = json['index'];
+    size = json['size'];
     perprice = json['perprice'];
   }
 
@@ -54,6 +56,7 @@ class ProductModel {
     data['name'] = this.name;
     data['orderLimit'] = this.orderLimit;
     data['index'] = this.index;
+    data['size'] = this.size;
     data['perprice'] = this.perprice;
     return data;
   }

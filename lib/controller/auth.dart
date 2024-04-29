@@ -8,6 +8,7 @@ import 'package:mall/screens/app_manager/app_manager_home.dart';
 import 'package:mall/screens/shop_manager/shop_manager_home.dart';
 import 'package:path/path.dart';
 import '../screens/app_manager/add_delivery_boys.dart';
+import '../screens/customer/rive/NavigationPoint.dart';
 import '../screens/delivery/delivery_home.dart';
 import 'firebase_api.dart';
 import '../constant/utils/utilities.dart';
@@ -20,9 +21,9 @@ class Auth {
   static final customerRef = FirebaseFirestore.instance.collection('customer');
   static final deliveryRef = FirebaseFirestore.instance.collection('delivery');
   static final appManagerRef =
-  FirebaseFirestore.instance.collection('appManager');
+      FirebaseFirestore.instance.collection('appManager');
   static final shopManagerRef =
-  FirebaseFirestore.instance.collection('shopManager');
+      FirebaseFirestore.instance.collection('shopManager');
   static final bookingRef = FirebaseFirestore.instance.collection('booking');
   static final shopRef = Auth.shopManagerRef
       .doc(Auth.auth.currentUser!.uid)
@@ -47,13 +48,13 @@ class Auth {
         .signInWithEmailAndPassword(email: email, password: password)
         .then((value) async {
       if (dropdownvalue == 'Customer') {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => CustomerHome()));
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => NavigationPoint()));
       } else if (dropdownvalue == 'Shop Manager') {
-        Navigator.push(context,
+        Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => ShopManagerHome()));
       } else if (dropdownvalue == 'App Manager') {
-        Navigator.push(
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => AppManagerHome()));
       } else if (dropdownvalue == 'Delivery Person') {
         showDetailDialog(context, email, password);
@@ -63,7 +64,7 @@ class Auth {
     });
   }
 
-  static Future<void> deliveryAssign(String name, String phno, String email,
+  static Future<void> deliveryAssign(String name, String phone, String email,
       String password, String id, BuildContext context) async {
     auth
         .createUserWithEmailAndPassword(email: email, password: password)
@@ -71,7 +72,7 @@ class Auth {
       deliveryRef.doc(id).set({
         'name': name,
         'email': email,
-        'phone': phno,
+        'phone': phone,
         'password': password,
         'id': id,
       });
@@ -85,6 +86,46 @@ class Auth {
     }).onError((error, stackTrace) {
       Utilities().showMessage(error.toString());
     });
+  }
+
+  static Future<void> changePassword(BuildContext context,
+      String currentPasswordController, String newPasswordController) async {
+    User? user = auth.currentUser;
+
+    print(user!.uid);
+    // Check if the current password is correct
+    String currentPassword = currentPasswordController;
+    AuthCredential credential = EmailAuthProvider.credential(
+      email: user!.email!,
+      password: currentPassword,
+    );
+
+    try {
+      await user.reauthenticateWithCredential(credential);
+
+      // If reauthentication is successful, update the password
+      String newPassword = newPasswordController;
+      await user.updatePassword(newPassword);
+
+      await customerRef
+          .doc(user.uid)
+          .update({'password': newPassword});
+      // Password updated successfully
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Password updated successfully'),
+        ),
+      );
+      Navigator.pop(context);
+    } catch (error) {
+      // If reauthentication fails, show an error message
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error: ${error.toString()}'),
+        ),
+      );
+      Navigator.pop(context);
+    }
   }
 
   static Future<void> signUp(String name, String email, String password,
@@ -109,7 +150,7 @@ class Auth {
             'phone': "",
             'gender': "",
             'profilepic':
-            'https://media.istockphoto.com/id/1462659206/photo/portrait-of-a-man-breathing-fresh-air-in-nature.webp?b=1&s=170667a&w=0&k=20&c=buxk0r8DkG1zuvVy0ob7bdMsBMoucDVMZmnW3z-exmk=',
+                'https://media.istockphoto.com/id/1462659206/photo/portrait-of-a-man-breathing-fresh-air-in-nature.webp?b=1&s=170667a&w=0&k=20&c=buxk0r8DkG1zuvVy0ob7bdMsBMoucDVMZmnW3z-exmk=',
           });
         } else if (dropdownvalue == 'Shop Manager') {
           shopManagerRef.doc(auth.currentUser!.uid).set({
@@ -128,7 +169,7 @@ class Auth {
             'uid': auth.currentUser!.uid
           });
         }
-        Navigator.push(
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => LoginScreen()));
       }).onError((error, stackTrace) {
         Utilities().showMessage(error.toString());
@@ -139,8 +180,8 @@ class Auth {
   }
 
   static Future<void> forgotpassword(
-      String email,
-      ) async {
+    String email,
+  ) async {
     auth.sendPasswordResetEmail(email: email.toString()).then((value) {
       Utilities().showMessage('Email sent');
     }).onError((error, stackTrace) {
@@ -150,8 +191,24 @@ class Auth {
 
   static Future<void> logout(BuildContext context) async {
     auth.signOut();
-    Navigator.push(
+    Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => LoginScreen()));
+  }
+
+  static Future<String> uploadRestroIcon(
+      File imageFile, String parlorManagerId) async {
+    final ext = imageFile.path.split('.').last;
+    log('Extension : ${ext}');
+    final firebaseStorageRef = FirebaseStorage.instance
+        .ref()
+        .child('restroIcons/${parlorManagerId}.$ext');
+    await firebaseStorageRef.putFile(
+        imageFile,
+        SettableMetadata(
+            contentType:
+            'image/$ext')); //putting file with type in firebase storage
+    final imageUrl = await firebaseStorageRef.getDownloadURL();
+    return imageUrl;
   }
 
   static Future<String> uploadShopIcon(
@@ -159,12 +216,12 @@ class Auth {
     final ext = imageFile.path.split('.').last;
     log('Extension : ${ext}');
     final firebaseStorageRef =
-    FirebaseStorage.instance.ref().child('shopIcons/${shopManagerId}.$ext');
+        FirebaseStorage.instance.ref().child('shopIcons/${shopManagerId}.$ext');
     await firebaseStorageRef.putFile(
         imageFile,
         SettableMetadata(
             contentType:
-            'image/$ext')); //putting file with type in firebase storage
+                'image/$ext')); //putting file with type in firebase storage
     final imageUrl = await firebaseStorageRef.getDownloadURL();
     return imageUrl;
   }
@@ -202,7 +259,7 @@ class Auth {
         imageFile,
         SettableMetadata(
             contentType:
-            'image/$ext')); //putting file with type in firebase storage
+                'image/$ext')); //putting file with type in firebase storage
     final imageUrl = await firebaseStorageRef.getDownloadURL();
     return imageUrl;
   }
@@ -216,7 +273,7 @@ class Auth {
       builder: (BuildContext context) {
         return AlertDialog(
           shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           content: StatefulBuilder(
             builder: (context, setModalState) {
               return SingleChildScrollView(
