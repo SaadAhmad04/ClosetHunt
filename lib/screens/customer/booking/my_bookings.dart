@@ -465,7 +465,7 @@ class _MyBookingsState extends State<MyBookings> {
     return StreamBuilder<QuerySnapshot>(
       stream: stream,
       builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
-        if (snapshot.hasData && snapshot.data != null) {
+        if (snapshot.hasData && snapshot.data!.docs.length!=0) {
           QuerySnapshot querySnapshot = snapshot.data as QuerySnapshot<Object?>;
           List<QueryDocumentSnapshot> documents = querySnapshot.docs;
           return Scaffold(
@@ -817,10 +817,100 @@ class _MyBookingsState extends State<MyBookings> {
               ],
             ),
           );
-        } else if (snapshot.connectionState == ConnectionState.waiting) {
+        } else if (!snapshot.hasData ||
+            snapshot.hasError ||
+            snapshot.connectionState == ConnectionState.waiting) {
           return Center(child: spinkit);
         } else {
-          return Center(child: Text('No bookings available'));
+          return Scaffold(
+              appBar: AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0.0,
+                leading: BackButton(
+                  color: Color(0xff974c7c),
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NavigationPoint()),
+                            (route) => false);
+                  },
+                ),
+                title: ShaderMask(
+                    shaderCallback: (Rect bounds) {
+                      return LinearGradient(colors: [Colors.pink, Colors.black])
+                          .createShader(bounds);
+                    },
+                    child: Text(
+                      'My Bookings',
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        color: Colors.white,
+                      ),
+                    )),
+                centerTitle: true,
+                actions: [
+                  complete == true
+                      ? Padding(
+                    padding: EdgeInsets.symmetric(
+                        vertical: mq.height * .01,
+                        horizontal: mq.width * .05),
+                    child: DropdownButton<String>(
+                      borderRadius: BorderRadius.circular(8),
+                      elevation: 1,
+                      padding: const EdgeInsets.only(top: 8),
+                      value: dropDownValue,
+                      icon: const Icon(Icons.keyboard_arrow_down),
+                      items: years
+                          .map<DropdownMenuItem<String>>((String item) {
+                        return DropdownMenuItem<String>(
+                          value: item,
+                          child: Text(item),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {
+                        setState(() {
+                          dropDownValue = newValue!;
+                        });
+                      },
+                    ),
+                  )
+                      : Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xff8D8E36),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 10), // Adjust padding
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          complete = true;
+                        });
+                      },
+                      icon: SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: Icon(Icons.filter_alt_rounded),
+                      ),
+                      label: Text('Filter'),
+                    ),
+                  )
+                ],
+              ),
+              body: Stack(
+            children: [
+              Container(
+                height: mq.height,
+                width: mq.width,
+                child: Image.network(
+                  "https://i.pinimg.com/736x/b0/ee/03/b0ee038e2310e0b40d1ec07546aefb38.jpg",
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Center(child: Text('No bookings available')),
+            ],
+          ));
         }
       },
     );

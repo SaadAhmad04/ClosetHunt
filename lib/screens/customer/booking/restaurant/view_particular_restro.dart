@@ -666,7 +666,8 @@ class _ViewParticularRestroState extends State<ViewParticularRestro>
     String? name = await pref.getString('name');
     String? email = await pref.getString('email');
     final dateTime = DateTime.now().millisecondsSinceEpoch.toString();
-    await Auth.customerRef
+    await Auth.customerRe
+    f
         .doc(Auth.auth.currentUser!.uid)
         .collection('payments')
         .doc(dateTime)
@@ -1066,12 +1067,15 @@ class _ViewParticularRestroState extends State<ViewParticularRestro>
                         Padding(
                           padding: const EdgeInsets.all(20.0),
                           child: RoundButton(
-                            //colors: Colors.black,
+                            colors: Color(0xff974C7C),
                               loading: loading,
                               title: "Pay",
                               onTap: () async {
                                 if (phoneController.text != "" &&
                                     billController.text != "") {
+                                  setState(() {
+                                    loading=true;
+                                  });
                                   double amount = (int.parse(
                                       billController.text.toString()) *
                                       15 /

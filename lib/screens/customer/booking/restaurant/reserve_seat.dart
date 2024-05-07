@@ -712,7 +712,7 @@ class _ReserveSeatState extends State<ReserveSeat> {
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colors.blue,
+                        color: Color(0xFFC8A2C8),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -724,7 +724,7 @@ class _ReserveSeatState extends State<ReserveSeat> {
                     date: DateTime.now(),
                     decoration: Icon(
                       Icons.today,
-                      color: Colors.blue,
+                      color: Color(0xFFC8A2C8),
                     ),
                   ),
                 ],
@@ -930,7 +930,7 @@ class _ReserveSeatState extends State<ReserveSeat> {
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.blue,
+                                      color: Color(0xFFC8A2C8),
                                       borderRadius: BorderRadius.circular(20)),
                                   child: Center(child: Text(time12Hour)),
                                 ),
@@ -977,6 +977,10 @@ class _ReserveSeatState extends State<ReserveSeat> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+
+                                backgroundColor: Color(0xFFC8A2C8),
+                              ),
                                 onPressed: () async {
                                   // List<Map<String, dynamic>> documentsData =
                                   //     [];
@@ -1215,6 +1219,10 @@ class _ReserveSeatState extends State<ReserveSeat> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+
+                                  backgroundColor: Color(0xFFC8A2C8),
+                                ),
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },

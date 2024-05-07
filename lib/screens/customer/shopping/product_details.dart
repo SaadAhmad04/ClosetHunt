@@ -759,6 +759,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                   ),
                   itemCount: filteredProducts.length,
                   itemBuilder: (context, index) {
+                    double price=double.parse(filteredProducts[index]['price']);
+                    String formattedPrice=price.toStringAsFixed(2);
                     return SizedBox(
                       height: 300,
                       child: Padding(
@@ -805,7 +807,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             ),
                             Container(
                               child: Text(
-                                '${filteredProducts[index]['price']}',
+                                '${formattedPrice}',
                                 style: TextStyle(fontSize: 18),
                               ),
                             ),

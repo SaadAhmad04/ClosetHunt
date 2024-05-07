@@ -549,10 +549,10 @@ class _ViewBookingState extends State<ViewBooking> {
                   child: Container(
                     width: mq.width,
                     height: mq.height * .1,
-                    decoration: BoxDecoration(
-                      color: Colors.blue.shade400,
+                    decoration: const BoxDecoration(
+                      color: Color(0xff974C7C),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Cancel',
                         style: TextStyle(
