@@ -15,6 +15,7 @@ class ShopKeeperWithoutShops extends StatefulWidget {
 }
 
 class _ShopKeeperWithoutShopsState extends State<ShopKeeperWithoutShops> {
+  int counter=0;
   late Stream<QuerySnapshot> stream;
 
   @override

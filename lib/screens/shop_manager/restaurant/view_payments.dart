@@ -644,7 +644,8 @@ class _ViewPaymentsState extends State<ViewPayments> {
           .orderBy('bookingId', descending: true)
           .snapshots(),
       builder: (context, snapshot) {
-        if (snapshot.hasData) {
+        if (snapshot.hasData && snapshot.data!.docs.length!=0) {
+
           double amount = 0;
           return Scaffold(
             appBar: AppBar(
@@ -770,8 +771,10 @@ class _ViewPaymentsState extends State<ViewPayments> {
             child: CircularProgressIndicator(),
           );
         } else {
-          return Center(
-            child: Text('No payments yet'),
+          return Scaffold(
+            body: Center(
+              child: Text('No payments yet'),
+            ),
           );
         }
       },

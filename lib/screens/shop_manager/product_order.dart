@@ -307,13 +307,18 @@ class _OrderProductState extends State<OrderProduct> {
               } else if (snapshot.connectionState == ConnectionState.done) {
                 bool subcollectionExists = snapshot.data as bool;
                 if (subcollectionExists) {
+                  print("true");
                   return StreamBuilder(
                       stream: Auth.shopManagerRef
                           .doc(Auth.auth.currentUser!.uid)
                           .collection('notifications')
                           .snapshots(),
                       builder: (context, sp) {
-                        if (sp.connectionState == ConnectionState.waiting) {
+                        if(!sp.hasData && sp.data==0){
+                          print("hello");
+                          return Center(child: Text("No Bookings Yet"),);
+                        }
+                        else if (sp.connectionState == ConnectionState.waiting) {
                           return Center(
                             child: CircularProgressIndicator(),
                           );
@@ -559,7 +564,8 @@ class _OrderProductState extends State<OrderProduct> {
                         }
                       });
                 } else {
-                  return SizedBox();
+                  print("false");
+                  return Center(child: Text("No Bookings Yet"));
                 }
               } else {
                 return Text("No Orders Yet");
