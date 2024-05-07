@@ -131,15 +131,16 @@ class _AssignShopState extends State<AssignShop> {
                         height: mq.height * 0.04,
                       ),
                       TextFormField(
-                        inputFormatters: [
-                          FilteringTextInputFormatter.allow(RegExp("[A-Za-z]"))
-                        ],
+                          inputFormatters: [
+                            FilteringTextInputFormatter.allow(RegExp("[A-Za-z ]")) // Added space inside the brackets
+                          ],
                         controller: shopManagerNameController,
                         cursorColor: Colors.grey.shade200,
+                        style: TextStyle(color: Colors.white), // Set text color to white
                         decoration: InputDecoration(
                           enabledBorder: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.grey.shade200)),
+                              borderSide: BorderSide(color: Colors.grey.shade200)
+                          ),
                           hintText: "Enter Shopkeeper's Name",
                           hintStyle: TextStyle(color: Colors.grey.shade200),
                           prefixIcon: Icon(Icons.drive_file_rename_outline),
@@ -153,14 +154,16 @@ class _AssignShopState extends State<AssignShop> {
                           }
                         },
                       ),
+
                       SizedBox(
                         height: mq.height * 0.04,
                       ),
                       TextFormField(
                         controller: shopNameController,
                         inputFormatters: [
-                          FilteringTextInputFormatter.allow(RegExp("[A-Za-z]"))
+                          FilteringTextInputFormatter.allow(RegExp("[A-Za-z ]"))
                         ],
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           enabledBorder: UnderlineInputBorder(
                               borderSide:
@@ -197,6 +200,7 @@ class _AssignShopState extends State<AssignShop> {
                         height: mq.height * 0.04,
                       ),
                       DropdownButton(
+                        dropdownColor: Colors.black,
                         // Initial Value
                         value: dropdownvalue,
 
@@ -207,6 +211,7 @@ class _AssignShopState extends State<AssignShop> {
                         // Array list of items
                         items: items.map((String items) {
                           return DropdownMenuItem(
+
                             value: items,
                             child: Text(items,
                                 style: TextStyle(color: Colors.grey.shade200)),
