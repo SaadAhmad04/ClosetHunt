@@ -666,8 +666,7 @@ class _ViewParticularRestroState extends State<ViewParticularRestro>
     String? name = await pref.getString('name');
     String? email = await pref.getString('email');
     final dateTime = DateTime.now().millisecondsSinceEpoch.toString();
-    await Auth.customerRe
-    f
+    await Auth.customerRef
         .doc(Auth.auth.currentUser!.uid)
         .collection('payments')
         .doc(dateTime)
