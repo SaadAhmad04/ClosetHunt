@@ -359,9 +359,12 @@ class _AppManagerNotificationHistoryState
                             Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: ListTile(
+                                tileColor: Colors.grey.shade200,
                                 shape: RoundedRectangleBorder(
-                                    side: BorderSide(color: Colors.grey),
-                                    borderRadius: BorderRadius.circular(10)),
+                                  borderRadius: BorderRadius.circular(25),
+                                  side: BorderSide(
+                                      color: Colors.black
+                                  ),),
                                 title: Text(
                                     '${snapshot.data!.docs[index]['shopName']}'),
                                 subtitle: Text(

@@ -759,7 +759,7 @@ class _ReserveSeatState extends State<ReserveSeat> {
                   title: Text("No Of Guests"),
                   trailing: Container(
                     height: 30,
-                    width: mq.width * 0.375,
+                    width: mq.width * 0.38,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
                         color: Color(0xFFC8A2C8)),

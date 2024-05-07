@@ -37,13 +37,18 @@ class _ViewSummaryState extends State<ViewSummary> {
       type: PlutoColumnType.text(),
     ),
     PlutoColumn(
-      title: 'Date',
-      field: 'date',
+      title: 'Reserved Date',
+      field: 'reservedDate',
       type: PlutoColumnType.text(),
     ),
     PlutoColumn(
-      title: 'Time',
-      field: 'time',
+      title: 'Reserved Time',
+      field: 'reservedTime',
+      type: PlutoColumnType.text(),
+    ),
+    PlutoColumn(
+      title: 'Booking Date',
+      field: 'bookingDate',
       type: PlutoColumnType.text(),
     ),
     PlutoColumn(
@@ -76,7 +81,15 @@ class _ViewSummaryState extends State<ViewSummary> {
   final List<PlutoColumnGroup> columnGroups = [
     PlutoColumnGroup(
       title: 'Booking details',
-      fields: ['bookingId', 'slotType', 'date', 'time', 'guests', 'status'],
+      fields: [
+        'bookingId',
+        'slotType',
+        'reservedDate',
+        'reservedTime',
+        'bookingDate',
+        'guests',
+        'status'
+      ],
     ),
     PlutoColumnGroup(
       title: 'Customer Information',
@@ -171,7 +184,10 @@ class _ViewSummaryState extends State<ViewSummary> {
 
               rows.clear();
               for (int i = bookingData.length - 1; i >= 0; i--) {
-                DateTime dateTime = DateTime.parse(bookingData[i]['date']);
+                int ms = int.parse(bookingData[i]['bookingId']);
+                DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(ms);
+                DateTime reservedDate =
+                DateTime.parse(bookingData[i]['date']);
                 bool isInRange = false;
                 switch (selectedTileIndex) {
                   case 0:
@@ -181,7 +197,7 @@ class _ViewSummaryState extends State<ViewSummary> {
                     break;
                   case 1:
                     isInRange = weekDates.any((date) =>
-                    date.year == dateTime.year &&
+                        date.year == dateTime.year &&
                         date.month == dateTime.month &&
                         date.day == dateTime.day);
                     break;
@@ -191,7 +207,7 @@ class _ViewSummaryState extends State<ViewSummary> {
                     break;
                   case 3:
                     isInRange = monthDates.any((date) =>
-                    date.year == dateTime.year &&
+                        date.year == dateTime.year &&
                         date.month == dateTime.month &&
                         date.day == dateTime.day);
                     break;
@@ -210,11 +226,13 @@ class _ViewSummaryState extends State<ViewSummary> {
                             PlutoCell(value: bookingData[i]['bookingId']),
                         'slotType':
                             PlutoCell(value: bookingData[i]['slotType']),
-                        'date': PlutoCell(
+                        'reservedDate': PlutoCell(
                             value:
-                                '${dateTime.day}-${dateTime.month}-${dateTime.year}'),
-                        'time': PlutoCell(
-                            value: bookingData[i]['time']),
+                                '${reservedDate.day}-${reservedDate.month}-${reservedDate.year}'),
+                        'reservedTime': PlutoCell(value: bookingData[i]['time']),
+                        'bookingDate': PlutoCell(
+                            value:
+                            '${dateTime.day}-${dateTime.month}-${dateTime.year}'),
                         'guests': PlutoCell(value: bookingData[i]['guests']),
                         'status': PlutoCell(
                             value: bookingData[i]['cancelled'] == true
